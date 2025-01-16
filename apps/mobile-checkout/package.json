@@ -18,8 +18,7 @@
     "align-deps": "rnx-align-deps --write",
     "check-deps": "rnx-align-deps",
     "adbreverse": "adb reverse tcp:9002 tcp:9002",
-    "adbreverse:standalone": "adb reverse tcp:8081 tcp:8081",
-    "copy-env": "cp ./node_modules/mobile-sdk/.env .env"
+    "adbreverse:standalone": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
     "@module-federation/enhanced": "0.6.13",
