@@ -56,7 +56,7 @@ const TabsNavigator = () => {
         options={{
           title: t('navigation.cart'),
           tabBarIcon: 'cart-outline',
-          tabBarButtonTestID: 'navigation.orderTabIcon',
+          tabBarButtonTestID: 'navigation.cartTabIcon',
           tabBarBadge: items.length,
         }}
       />

@@ -68,7 +68,7 @@ export default function AddToCart({
             }}
           />
           <IconButton
-            testID="productDetailsScreen.addToOrder"
+            testID="productDetailsScreen.addToOrderButton"
             icon="cart"
             iconColor={theme.colors.onPrimaryContainer}
             disabled={quantity === 0}
