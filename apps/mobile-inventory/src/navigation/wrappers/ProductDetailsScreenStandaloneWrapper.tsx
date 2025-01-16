@@ -8,7 +8,17 @@ export const ProductDetailsScreenStandaloneWrapper = () => {
     Alert.alert('Go back');
   };
 
+  const goToCart = () => {
+    Alert.alert('Go to cart');
+  };
+
   const productId = '1';
 
-  return <ProductDetailsScreen goBack={goBack} productId={productId} />;
+  return (
+    <ProductDetailsScreen
+      goBack={goBack}
+      goToCart={goToCart}
+      productId={productId}
+    />
+  );
 };
