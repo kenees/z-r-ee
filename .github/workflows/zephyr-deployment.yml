@@ -1,0 +1,29 @@
+name: Zephyr Deployment
+
+# If the PR is closed and the Pr was targeting main
+on:
+    pull_request:
+      types: [closed]
+      branches:
+        - main
+
+# Needed for nx-set-shas when run on the main branch
+permissions:
+    actions: read
+    pull-requests: write
+    contents: read
+
+jobs:
+    zephyr-deployment:
+        # If the PR was actually merged into main
+        if: github.event.pull_request.merged == true
+        runs-on: ubuntu-latest
+        timeout-minutes: 10 # Set a timeout for the job to prevent it from running indefinitely
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+            - uses: ./.github/actions/setup-dependencies
+            - uses: ./.github/actions/zephyr-deployment
+              with:
+                auth_token: ${{ secrets.ZEPHYR_USER_AUTH_TOKEN }}

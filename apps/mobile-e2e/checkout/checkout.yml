@@ -1,0 +1,39 @@
+appId: com.zephyr.shop.host
+---
+- runFlow: ../common/setupAndOpenApp.yml
+- runFlow:
+    file: ../common/login.yml
+    env:
+      USERNAME: ${'sample' + Date.now() + Math.random().toString(36).substring(2, 8) + '@gmail.com'} # Generate a random email address to make sure that the cart is empty
+      PASSWORD: '12345678'
+- scrollUntilVisible:
+    element:
+      id: ${output.homeScreenPOM.recommendedProductsList}
+- tapOn:
+    id: ${output.homeScreenPOM.recommendedProductListItem(0)}
+- scrollUntilVisible:
+    element:
+      id: ${output.productDetailsScreenPOM.addToOrderButton}
+- tapOn:
+    id: ${output.productDetailsScreenPOM.addToOrderButton}
+- assertVisible:
+    id: ${output.productDetailsScreenPOM.addedToOrderSuccessSnackbar}
+    optional: true # Due to the short duration of the Snackbar
+- assertNotVisible:
+    id: ${output.productDetailsScreenPOM.addedToOrderSuccessSnackbar}
+- scrollUntilVisible:
+    element:
+      id: ${output.productDetailsScreenPOM.backButton}
+    direction: UP
+- tapOn:
+    id: ${output.productDetailsScreenPOM.backButton}
+- tapOn:
+    id: ${output.navigationPOM.orderTabIcon}
+- tapOn:
+    id: ${output.cartScreenPOM.checkoutButton}
+- tapOn:
+    id: ${output.checkoutSuccessScreenPOM.goHomeButton}
+- scrollUntilVisible:
+    element:
+      id: ${output.homeScreenPOM.greetingsLabel}
+    direction: UP

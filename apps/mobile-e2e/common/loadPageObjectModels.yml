@@ -1,0 +1,8 @@
+appId: com.zephyr.shop.host
+---
+- runScript: ../pageObjectModels/cartScreen.js
+- runScript: ../pageObjectModels/checkoutSuccessScreen.js
+- runScript: ../pageObjectModels/homeScreen.js
+- runScript: ../pageObjectModels/navigation.js
+- runScript: ../pageObjectModels/productDetailsScreen.js
+- runScript: ../pageObjectModels/signInScreen.js

@@ -1,0 +1,86 @@
+name: E2E Android Tests
+
+on:
+  workflow_call:
+    secrets:
+      NPM_RC_TOKEN:
+        required: true
+      MOBILE_ENV:
+        required: true
+
+jobs:
+  android-e2e-tests:
+    runs-on: ubuntu-latest
+    env:
+      NPM_RC_TOKEN: ${{ secrets.NPM_RC_TOKEN }}
+      MOBILE_ENV: ${{ secrets.MOBILE_ENV }}
+      MAESTRO_VERSION: 1.39.4
+      ANDROID_EMULATOR_API_LEVEL: 28
+      ANDROID_EMULATOR_TARGET: default
+      ANDROID_EMULATOR_ARCH: x86
+      ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL: 120
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup KVM (Required for Android Emulator)
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: AVD cache
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: avd-${{ env.ANDROID_EMULATOR_API_LEVEL }}-${{ env.ANDROID_EMULATOR_TARGET }}-${{ env.ANDROID_EMULATOR_ARCH }}-${{ runner.os }}
+
+      - name: Install Maestro CLI
+        run: |
+          curl -Ls "https://get.maestro.mobile.dev" | bash
+          echo "${HOME}/.maestro/bin" >> $GITHUB_PATH
+
+      - name: Setup JS Environment and Dependencies
+        uses: ./.github/actions/setup-dependencies
+
+      - name: Configure Mobile Environment
+        run: |
+          echo "{{ env.MOBILE_ENV }}" > ./packages/mobile-sdk/.env
+          pnpm mobile:env
+
+      - name: Create AVD and generate snapshot for caching
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
+          target: ${{ env.ANDROID_EMULATOR_TARGET }}
+          arch: ${{ env.ANDROID_EMULATOR_ARCH }}
+          force-avd-creation: false
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: echo "Generated AVD snapshot for caching."
+
+      - name: Run Android E2E Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
+          target: ${{ env.ANDROID_EMULATOR_TARGET }}
+          arch: ${{ env.ANDROID_EMULATOR_ARCH }}
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: |
+            chmod +x ./.github/scripts/run-android-maestro-tests.sh
+            ./.github/scripts/run-android-maestro-tests.sh
+      - name: Upload Maestro Logs on Failure
+        if: failure() # Runs only if any of the previous steps fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: maestro-logs-android
+          path: ~/.maestro/tests/
