@@ -7,4 +7,4 @@ appId: com.zephyr.shop.host
       USERNAME: 'sample@gmail.com'
       PASSWORD: 12345678
 - assertVisible:
-    id: ${output.homeScreenPOM.greetingsLabel}
+    id: ${output.accountScreenPOM.userLabel}
