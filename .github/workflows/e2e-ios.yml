@@ -1,19 +1,11 @@
 name: E2E iOS Tests
 
-on:
-  workflow_call:
-    secrets:
-      NPM_RC_TOKEN:
-        required: true
-      MOBILE_ENV:
-        required: true
+on: [workflow_call]
 
 jobs:
   ios-e2e-tests:
     runs-on: macos-latest
     env:
-      NPM_RC_TOKEN: ${{ secrets.NPM_RC_TOKEN }}
-      MOBILE_ENV: ${{ secrets.MOBILE_ENV }}
       RUBY_VERSION: 2.7.6
       MAESTRO_VERSION: 1.39.4
       SIMULATOR_NAME: "iPhone 15 Pro Max"
@@ -46,11 +38,6 @@ jobs:
 
       - name: Install Pods
         run: pnpm --filter MobileHost pods
-
-      - name: Configure Mobile Environment
-        run: |
-          echo "{{ env.MOBILE_ENV }}" > ./packages/mobile-sdk/.env
-          pnpm mobile:env
 
       - name: Run iOS E2E Tests
         run: |

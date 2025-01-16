@@ -16,11 +16,7 @@ jobs:
   android-tests:
     if: ${{ github.event.inputs.platform == 'android' || github.event.inputs.platform == 'both' }}
     uses: ./.github/workflows/e2e-android.yml
-    secrets:
-      MOBILE_ENV: ${{ secrets.MOBILE_ENV }}
 
   ios-tests:
     if: ${{ github.event.inputs.platform == 'ios' || github.event.inputs.platform == 'both' }}
     uses: ./.github/workflows/e2e-ios.yml
-    secrets:
-      MOBILE_ENV: ${{ secrets.MOBILE_ENV }}
