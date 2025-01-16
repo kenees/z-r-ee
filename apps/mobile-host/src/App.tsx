@@ -6,8 +6,8 @@ import {
   LocalizationContextProvider,
   QueryClient,
   QueryClientProvider,
-  ThemeProvider,
   SnackbarContextProvider,
+  ThemeProvider,
 } from 'mobile-core';
 
 import AnimatedBootSplash from './components/AnimatedBootSplash';
