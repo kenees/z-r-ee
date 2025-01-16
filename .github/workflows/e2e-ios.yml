@@ -1,0 +1,52 @@
+name: E2E iOS Tests
+
+on: [workflow_call]
+
+jobs:
+  ios-e2e-tests:
+    runs-on: macos-latest
+    env:
+      RUBY_VERSION: 2.7.6
+      MAESTRO_VERSION: 1.39.4
+      SIMULATOR_NAME: "iPhone 15 Pro Max"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+
+      - name: Install Maestro CLI and iOS Utilities
+        run: |
+          curl -Ls "https://get.maestro.mobile.dev" | bash
+          brew tap facebook/fb
+          brew install facebook/fb/idb-companion
+          echo "${HOME}/.maestro/bin" >> $GITHUB_PATH
+
+      - name: Setup JS Environment and Dependencies
+        uses: ./.github/actions/setup-dependencies
+
+      - name: Cache Pods
+        uses: actions/cache@v3
+        with:
+          path: apps/mobile-host/ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('apps/mobile-host/ios/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
+
+      - name: Install Pods
+        run: pnpm --filter MobileHost pods
+
+      - name: Run iOS E2E Tests
+        run: |
+          chmod +x ./.github/scripts/run-ios-maestro-tests.sh
+          ./.github/scripts/run-ios-maestro-tests.sh
+
+      - name: Upload Maestro Logs on Failure
+        if: failure() # Runs only if any of the previous steps fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: maestro-logs-ios
+          path: ~/.maestro/tests/

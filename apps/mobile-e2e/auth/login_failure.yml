@@ -1,0 +1,9 @@
+appId: com.zephyr.shop.host
+---
+- runFlow: ../common/setupAndOpenApp.yml
+- tapOn:
+    id: ${output.signInScreenPOM.signInButton}
+- assertVisible:
+    id: ${output.signInScreenPOM.emailError}
+- assertVisible:
+    id: ${output.signInScreenPOM.passwordError}

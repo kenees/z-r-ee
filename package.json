@@ -1,0 +1,82 @@
+{
+  "name": "zephyr-shop-example",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.9.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "start:mobile-host": "pnpm --filter MobileHost start",
+    "start:mobile-cart": "pnpm --filter MobileCart start",
+    "start:mobile-inventory": "pnpm --filter MobileInventory start",
+    "start:mobile-checkout": "pnpm --filter MobileCheckout start",
+    "start:mobile-orders": "pnpm --filter MobileOrders start",
+    "start:standalone:mobile-cart": "pnpm --filter MobileCart start:standalone",
+    "start:standalone:mobile-inventory": "pnpm --filter MobileInventory start:standalone",
+    "start:standalone:mobile-checkout": "pnpm --filter MobileCheckout start:standalone",
+    "start:standalone:mobile-orders": "pnpm --filter MobileOrders start:standalone",
+    "run:mobile-host:ios": "pnpm --filter MobileHost ios",
+    "run:mobile-host:android": "pnpm --filter MobileHost android",
+    "run:mobile-checkout:android": "pnpm --filter MobileCheckout android",
+    "run:mobile-checkout:ios": "pnpm --filter MobileCheckout ios",
+    "run:mobile-cart:ios": "pnpm --filter MobileCart ios",
+    "run:mobile-cart:android": "pnpm --filter MobileCart android",
+    "run:mobile-inventory:ios": "pnpm --filter MobileInventory ios",
+    "run:mobile-inventory:android": "pnpm --filter MobileInventory android",
+    "run:mobile-orders:ios": "pnpm --filter MobileOrders ios",
+    "run:mobile-orders:android": "pnpm --filter MobileOrders android",
+    "pods": "nx run-many --parallel=1 -t pods",
+    "pods:update": "pnpm nx run-many --parallel=1 -t pods:update",
+    "start:mobile:concurrently": "concurrently -n HOST,CART,INVENTORY,CHECKOUT -c green,blue,yellow,magenta \"pnpm run start:mobile-host\" \"pnpm run start:mobile-cart\" \"pnpm run start:mobile-inventory\" \"pnpm run start:mobile-checkout\" \"pnpm run start:mobile-orders\" || true",
+    "start": "mprocs",
+    "typecheck": "nx run-many -t typecheck",
+    "lint:check": "nx run-many -t lint",
+    "lint": "nx run-many -t lint --fix --outputStyle static",
+    "test": "nx run-many -t test",
+    "adbreverse": "nx run-many -t adbreverse",
+    "align-deps": "pnpm -r align-deps",
+    "check-deps": "pnpm -r check-deps",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@nx/eslint": "20.2.0-beta.2",
+    "@nx/eslint-plugin": "20.2.0-beta.2",
+    "@nx/jest": "20.2.0-beta.2",
+    "@nx/plugin": "20.2.0-beta.2",
+    "eslint": "~8.57.0",
+    "husky": "^9.1.7",
+    "mprocs": "^0.7.1",
+    "nx": "20.2.0-beta.2",
+    "prettier": "^3.3.3",
+    "zephyr-agent": "0.0.0-canary-20241122011536",
+    "zephyr-rspack-plugin": "0.0.0-canary-20241122175815"
+  },
+  "pnpm": {
+    "overrides": {
+      "@react-native/dev-middleware": "0.76.1"
+    },
+    "patchedDependencies": {
+      "@react-native/community-cli-plugin": "patches/@react-native__community-cli-plugin.patch",
+      "react-native-paper": "patches/react-native-paper.patch",
+      "@callstack/repack": "patches/@callstack__repack.patch",
+      "react-native": "patches/react-native.patch"
+    },
+    "packageExtensions": {
+      "@module-federation/data-prefetch": {
+        "peerDependenciesMeta": {
+          "react-dom": {
+            "optional": true
+          }
+        }
+      }
+    },
+    "allowedDeprecatedVersions": {
+      "eslint": "8"
+    }
+  }
+}

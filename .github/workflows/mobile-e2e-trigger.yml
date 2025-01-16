@@ -1,0 +1,22 @@
+name: Mobile E2E Tests Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Select the platform to test'
+        required: true
+        type: choice
+        options:
+          - android
+          - ios
+          - both
+
+jobs:
+  android-tests:
+    if: ${{ github.event.inputs.platform == 'android' || github.event.inputs.platform == 'both' }}
+    uses: ./.github/workflows/e2e-android.yml
+
+  ios-tests:
+    if: ${{ github.event.inputs.platform == 'ios' || github.event.inputs.platform == 'both' }}
+    uses: ./.github/workflows/e2e-ios.yml
