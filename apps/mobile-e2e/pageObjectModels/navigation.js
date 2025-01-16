@@ -1,5 +1,6 @@
 output.navigationPOM = {
   homeTabIcon: `navigation.homeTabIcon`,
-  orderTabIcon: `navigation.orderTabIcon`,
+  cartTabIcon: `navigation.cartTabIcon`,
+  ordersTabIcon: `navigation.ordersTabIcon`,
   accountTabIcon: `navigation.accountTabIcon`,
 };
