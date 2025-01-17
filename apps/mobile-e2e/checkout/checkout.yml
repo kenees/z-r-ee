@@ -30,4 +30,4 @@ appId: com.zephyr.shop.host
     id: ${output.navigationPOM.ordersTabIcon}
 - scrollUntilVisible:
     element:
-      id: ${output.ordersScreenPOM.ordersListItemId(0)}
+      id: ${output.ordersScreenPOM.ordersListItem(0)}
