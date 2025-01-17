@@ -1,9 +1,6 @@
 name: E2E iOS Tests
 
-on:
-  pull_request:
-    branches:
-      - main
+on: [workflow_call]
 
 jobs:
   ios-e2e-tests:
