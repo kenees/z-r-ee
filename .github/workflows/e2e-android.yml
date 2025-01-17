@@ -13,7 +13,6 @@ jobs:
       ANDROID_EMULATOR_API_LEVEL: 28
       ANDROID_EMULATOR_TARGET: default
       ANDROID_EMULATOR_ARCH: x86
-      ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL: 120
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
