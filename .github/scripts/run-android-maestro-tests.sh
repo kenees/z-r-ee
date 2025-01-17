@@ -4,7 +4,7 @@
 set -e
 
 # Define the ports as a constant variable
-PORTS=(8081 9000 9001 9002)
+PORTS=(8081 9000 9001 9002 9003)
 
 # Get the directory of the current script
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
