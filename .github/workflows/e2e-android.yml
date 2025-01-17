@@ -53,7 +53,7 @@ jobs:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
           arch: ${{ env.ANDROID_EMULATOR_ARCH }}
-          force-avd-creation: true
+          force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: echo "Generated AVD snapshot for caching."
 
@@ -63,11 +63,11 @@ jobs:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
           arch: ${{ env.ANDROID_EMULATOR_ARCH }}
-          force-avd-creation: true
+          force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: |
             chmod +x ./.github/scripts/run-android-maestro-tests.sh
-            ./.github/scripts/run-android-maestro-tests.sh && killall -INT crashpad_handler || true
+            ./.github/scripts/run-android-maestro-tests.sh
       - name: Upload Maestro Logs on Failure
         if: failure() # Runs only if any of the previous steps fail
         uses: actions/upload-artifact@v4
