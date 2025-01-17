@@ -1,7 +1,7 @@
 import React, {Suspense, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import {Card, Text, useProducts} from 'mobile-core';
+import {Card, LoadingScreen, Text, useProducts} from 'mobile-core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import ProductDetails from '../components/ProductDetails';
@@ -34,7 +34,7 @@ export default ({goBack, goToCart, productId}: Props) => {
   }, [product]);
 
   if (isLoading) {
-    return <Text>Loading...</Text>;
+    return <LoadingScreen />;
   }
 
   if (!product) {
