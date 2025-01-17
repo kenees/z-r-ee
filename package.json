@@ -29,7 +29,7 @@
     "run:mobile-orders:android": "pnpm --filter MobileOrders android",
     "pods": "nx run-many --parallel=1 -t pods",
     "pods:update": "pnpm nx run-many --parallel=1 -t pods:update",
-    "start:mobile:concurrently": "concurrently -n HOST,CART,INVENTORY,CHECKOUT -c green,blue,yellow,magenta \"pnpm run start:mobile-host\" \"pnpm run start:mobile-cart\" \"pnpm run start:mobile-inventory\" \"pnpm run start:mobile-checkout\" \"pnpm run start:mobile-orders\" || true",
+    "start:mobile:concurrently": "concurrently -n HOST,CART,INVENTORY,CHECKOUT,ORDERS -c green,blue,yellow,magenta \"pnpm run start:mobile-host\" \"pnpm run start:mobile-cart\" \"pnpm run start:mobile-inventory\" \"pnpm run start:mobile-checkout\" \"pnpm run start:mobile-orders\" || true",
     "start": "mprocs",
     "typecheck": "nx run-many -t typecheck",
     "lint:check": "nx run-many -t lint",
