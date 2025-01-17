@@ -1,6 +1,9 @@
 name: E2E Android Tests
 
-on: [workflow_call]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   android-e2e-tests:
