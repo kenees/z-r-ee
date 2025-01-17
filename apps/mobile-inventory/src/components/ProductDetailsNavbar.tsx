@@ -18,6 +18,7 @@ export default function ProductDetailsNavbar({goBack, goToCart}: Props) {
       rightSection={() => (
         <>
           <IconButton
+            testID="productDetailsScreen.cartButton"
             icon="cart-outline"
             iconColor="white"
             onPress={goToCart}
