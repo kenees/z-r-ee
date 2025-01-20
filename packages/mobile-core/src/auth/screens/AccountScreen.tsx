@@ -53,11 +53,18 @@ export const AccountScreen = ({onLoginPress, appVersion}: Props) => {
               {t('account.log_out').toUpperCase()}
             </Button>
           ) : (
-            <Button mode="contained" onPress={handleLogin}>
+            <Button
+              testID="accountScreen.loginButton"
+              mode="contained"
+              onPress={handleLogin}>
               {t('account.log_in').toUpperCase()}
             </Button>
           )}
-          {user ? <Text>{t('account.user_label', {user})}</Text> : null}
+          {user ? (
+            <Text testID="accountScreen.userLabel">
+              {t('account.user_label', {user})}
+            </Text>
+          ) : null}
           <VStack style={styles.settingsShadowContainer}>
             <VStack style={styles.settingsRadiusContainer}>
               <Checkbox.Item

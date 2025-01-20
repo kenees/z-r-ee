@@ -4,11 +4,12 @@ import {Image, Platform, StyleSheet, View} from 'react-native';
 type Props = {
   rightSection?: () => React.ReactNode;
   leftSection?: () => React.ReactNode;
+  testID?: string;
 };
 
-export function Navbar({rightSection, leftSection}: Props) {
+export function Navbar({rightSection, leftSection, testID}: Props) {
   return (
-    <View style={styles.container}>
+    <View testID={testID} style={styles.container}>
       <Image
         accessibilityIgnoresInvertColors
         source={Platform.select({

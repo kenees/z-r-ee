@@ -15,13 +15,15 @@ import FavButton from './FavButton';
 type Props = {
   item: Product;
   onPress: () => void;
+  testID?: string;
 };
 
-export default function HomeProduct({item, onPress}: Props) {
+export default function HomeProduct({item, onPress, testID}: Props) {
   const styles = useStyles();
 
   return (
     <Pressable
+      testID={testID}
       accessibilityRole="button"
       style={styles.container}
       onPress={onPress}>

@@ -45,7 +45,12 @@ export default function CartScreen() {
           style={styles.list}
           data={currentOrders}
           keyExtractor={item => item.id}
-          renderItem={({item}) => <OrderItem order={item} />}
+          renderItem={({item, index}) => (
+            <OrderItem
+              testID={`ordersScreen.ordersListItem.${index}`}
+              order={item}
+            />
+          )}
         />
       </View>
     </ModuleBoundary>

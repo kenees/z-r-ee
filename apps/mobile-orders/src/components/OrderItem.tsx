@@ -15,15 +15,16 @@ import {
 
 type Props = {
   order: Order;
+  testID?: string;
 };
 
-export function OrderItem({order}: Props) {
+export function OrderItem({order, testID}: Props) {
   const {t} = useTranslation('orders');
   const theme = useTheme();
   const {data, isLoading} = useProducts();
 
   return (
-    <View style={styles.container}>
+    <View testID={testID} style={styles.container}>
       <HStack style={styles.infoContainer}>
         <Text style={styles.infoTitle} variant="bodyLarge">
           {t('list.id')}

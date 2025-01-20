@@ -1,5 +1,11 @@
 appId: com.zephyr.shop.host
 ---
+
+- tapOn:
+    id: ${output.navigationPOM.accountTabIcon}
+- tapOn:
+    id: ${output.accountScreenPOM.loginButton}
+- waitForAnimationToEnd
 - tapOn:
     id: ${output.signInScreenPOM.emailInput}
 - waitForAnimationToEnd

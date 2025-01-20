@@ -1,22 +1,10 @@
 appId: com.zephyr.shop.host
 ---
 - runFlow: ../common/setupAndOpenApp.yml
-- runFlow:
-    file: ../common/login.yml
-    env:
-      USERNAME: 'sample@gmail.com'
-      PASSWORD: '12345678'
+- waitForAnimationToEnd
 - assertVisible:
-    id: ${output.homeScreenPOM.greetingsLabel}
-- scrollUntilVisible:
-    element:
-      id: ${output.homeScreenPOM.ordersOverviewLabel}
-- scrollUntilVisible:
-    element:
-      id: ${output.homeScreenPOM.recommendedForYouLabel}
-- scrollUntilVisible:
-    element:
-      id: ${output.homeScreenPOM.browseByCategoryLabel}
-- scrollUntilVisible:
-    element:
-      id: ${output.homeScreenPOM.newForYouLabel}
+    id: ${output.homeScreenPOM.navbar}
+- assertVisible:
+    id: ${output.homeScreenPOM.productsList}
+- assertVisible:
+    id: ${output.homeScreenPOM.productsListItem(0)}

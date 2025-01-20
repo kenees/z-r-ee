@@ -21,8 +21,9 @@ const HomeScreen = ({onProductPress}: Props) => {
 
   return (
     <View style={styles.container}>
-      <Navbar />
+      <Navbar testID="homeScreen.navbar" />
       <FlatList
+        testID="homeScreen.productsList"
         style={styles.listContainer}
         contentContainerStyle={styles.contentContainer}
         data={data}
@@ -39,8 +40,12 @@ const HomeScreen = ({onProductPress}: Props) => {
 
           return null;
         }}
-        renderItem={({item}) => (
-          <HomeProduct item={item} onPress={() => onProductPress(item.id)} />
+        renderItem={({item, index}) => (
+          <HomeProduct
+            testID={`homeScreen.productsListItem.${index}`}
+            item={item}
+            onPress={() => onProductPress(item.id)}
+          />
         )}
       />
     </View>

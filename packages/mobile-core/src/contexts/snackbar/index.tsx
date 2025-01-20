@@ -62,8 +62,8 @@ export const SnackbarContextProvider = ({
           setIconName(getIconName(type));
           setTestID(
             type === 'success'
-              ? 'productDetailsScreen.addedToOrderSuccessSnackbar'
-              : 'productDetailsScreen.addedToOrderErrorSnackbar',
+              ? 'productDetailsScreen.addedToCartSuccessSnackbar'
+              : 'productDetailsScreen.addedToCartErrorSnackbar',
           );
           setVisible(true);
         },
