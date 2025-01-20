@@ -15,6 +15,7 @@ const deTranslations = {
   host: require('./de/host.json'),
   inventory: require('./de/inventory.json'),
   checkout: require('./de/checkout.json'),
+  orders: require('./de/orders.json'),
 };
 export const translations = {
   en: enTranslations,

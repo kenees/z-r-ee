@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   list: {
-    marginHorizontal: 16,
+    paddingHorizontal: 16,
   },
   headerContainer: {
     alignItems: 'center',
