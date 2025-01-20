@@ -40,6 +40,9 @@ jobs:
         run: pnpm --filter MobileHost pods
 
       - name: Run iOS E2E Tests
+        env:
+          ZC: 1,
+          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
         run: |
           chmod +x ./.github/scripts/run-ios-maestro-tests.sh
           ./.github/scripts/run-ios-maestro-tests.sh

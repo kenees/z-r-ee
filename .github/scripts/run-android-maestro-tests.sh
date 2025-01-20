@@ -19,7 +19,7 @@ echo "🚀 Starting Android Maestro tests..."
 
 # Start the mobile servers in the background
 echo "🔧 Starting mobile servers..."
-pnpm run start:mobile:concurrently & # runs in background
+ZC="$ZC" ZE_SECRET_TOKEN="$ZE_SECRET_TOKEN" pnpm run start:mobile:concurrently & # runs in background
 echo "✅ Mobile servers started successfully."
 
 # Run adb reverse scripts to set up port forwarding
