@@ -4,5 +4,5 @@
   "guest_checkout": "Guest Checkout",
   "checkout_success_title": "Order Confirmed!",
   "checkout_success_message": "Your order has been placed successfully. We’re preparing it for you!",
-  "checkout_success_button": "Home"
+  "checkout_success_button": "Continue"
 }

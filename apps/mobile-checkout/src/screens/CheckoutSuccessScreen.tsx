@@ -110,7 +110,9 @@ const styles = StyleSheet.create({
   text2: {
     textAlign: 'center',
   },
-  button: {},
+  button: {
+    marginBottom: 16,
+  },
   buttonLabel: {
     textTransform: 'uppercase',
     fontFamily: Platform.select({
