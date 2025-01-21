@@ -39,13 +39,23 @@ jobs:
       - name: Install Pods
         run: pnpm --filter MobileHost pods
 
-      - name: Run iOS E2E Tests
+      - name: Run iOS E2E Tests on Release Mode
+        if: ${{ inputs.mode == 'release' || inputs.mode == 'both' }}
         env:
           ZC: 1,
+          MODE: 'Release',
           ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
         run: |
           chmod +x ./.github/scripts/run-ios-maestro-tests.sh
           ./.github/scripts/run-ios-maestro-tests.sh
+
+      - name: Run iOS E2E Tests on Debug Mode
+        if: ${{ inputs.mode == 'debug' || inputs.mode == 'both' }}
+        env:
+          MODE: 'Debug',
+        run: |
+          chmod +x ./.github/scripts/run-ios-maestro-tests.sh
+          ./.github/scripts/run-ios-maestro-tests.sh          
 
       - name: Upload Maestro Logs on Failure
         if: failure() # Runs only if any of the previous steps fail

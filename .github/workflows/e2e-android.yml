@@ -54,11 +54,13 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: echo "Generated AVD snapshot for caching."
 
-      - name: Run Android E2E Tests
+      - name: Run Android E2E Tests on Release Mode
+        if: ${{ inputs.mode == 'release' || inputs.mode == 'both' }}
         uses: reactivecircus/android-emulator-runner@v2
         env:
           ZC: 1,
-          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }},
+          MODE: 'release',
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
@@ -68,6 +70,22 @@ jobs:
           script: |
             chmod +x ./.github/scripts/run-android-maestro-tests.sh
             ./.github/scripts/run-android-maestro-tests.sh
+
+      - name: Run Android E2E Tests on Debug Mode
+        if: ${{ inputs.mode == 'debug' || inputs.mode == 'both' }}
+        uses: reactivecircus/android-emulator-runner@v2
+        env:
+          MODE: 'debug',
+        with:
+          api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
+          target: ${{ env.ANDROID_EMULATOR_TARGET }}
+          arch: ${{ env.ANDROID_EMULATOR_ARCH }}
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: |
+            chmod +x ./.github/scripts/run-android-maestro-tests.sh
+            ./.github/scripts/run-android-maestro-tests.sh
+
       - name: Upload Maestro Logs on Failure
         if: failure() # Runs only if any of the previous steps fail
         uses: actions/upload-artifact@v4
