@@ -1,0 +1,34 @@
+name: Zephyr Repack Plugin E2E testing
+on:
+  repository_dispatch:
+    types: [trigger-from-zephyr-packages]
+jobs:
+  test-zephyr-repack-plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Run a Task
+        run: echo "Workflow triggered by the submodule"
+
+      - name: Add "zephyr-packages" repo as submodule
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO_URL="https://${GITHUB_TOKEN}@github.com/ZephyrCloudIO/zephyr-packages.git"
+          # TODO: Change branch param from "repack-fixed" to "main" after merging this PR: https://github.com/ZephyrCloudIO/zephyr-packages/pull/4
+          git submodule add -b repack-fixed $REPO_URL submodules/zephyr-packages
+          git submodule update --init --recursive
+
+      - name: Build Zephyr Repack Plugin locally
+        uses: ./.github/actions/build-zephyr-repack-plugin
+
+      - name: Run E2E tests with locally built Zephyr Repack Plugin [Android]
+        with:
+           mode: 'release'
+        uses: ./.github/workflows/e2e-android.yml
+
+      - name: Run E2E tests with locally built Zephyr Repack Plugin [iOS]
+        with:
+          mode: 'release'
+        uses: ./.github/workflows/e2e-ios.yml
