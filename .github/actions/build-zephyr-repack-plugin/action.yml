@@ -1,0 +1,32 @@
+name: Build Zephyr Repack Plugin
+description: Sets up the "zephyr-packages" dependencies and builds Zephyr Repack Plugin locally
+
+runs:
+  using: "composite"
+  steps:
+    # Ensures a consistent pnpm version being used across all actions
+    # Uses the version specified in the project's package.json file under the key: packageManager
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
+      with:
+        run_install: false
+
+    # Ensures a consistent node version being used across all actions
+    - uses: actions/setup-node@v4
+      name: Install Node.js
+      with:
+        node-version-file: '.node-version'
+        cache: 'pnpm'
+        cache-dependency-path: '**/pnpm-lock.yaml'
+
+    - name: Install "zephyr-packages" dependencies
+      working-directory: submodules/zephyr-packages
+      run: |
+        pnpm install --prefer-offline --frozen-lockfile
+        pnpm install -g concurrently
+      shell: bash
+
+    - name: Build Zephyr Repack Plugin
+      working-directory: submodules/zephyr-packages/libs/zephyr-repack-plugin
+      run: pnpm build
+      shell: bash
