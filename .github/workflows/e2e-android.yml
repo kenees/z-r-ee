@@ -1,6 +1,15 @@
 name: E2E Android Tests
 
-on: [workflow_call]
+on:
+  workflow_call:
+      mode:
+        description: 'Select the mode to test'
+        required: true
+        type: choice
+        options:
+          - debug
+          - release
+          - both
 
 jobs:
   android-e2e-tests:

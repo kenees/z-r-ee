@@ -1,6 +1,15 @@
 name: E2E iOS Tests
 
-on: [workflow_call]
+on:
+  workflow_call:
+      mode:
+        description: 'Select the mode to test'
+        required: true
+        type: choice
+        options:
+          - debug
+          - release
+          - both
 
 jobs:
   ios-e2e-tests:
