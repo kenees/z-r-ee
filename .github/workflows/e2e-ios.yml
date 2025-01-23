@@ -2,6 +2,7 @@ name: E2E iOS Tests
 
 on:
   workflow_call:
+    inputs:
       mode:
         description: 'Select the mode to test'
         required: true
