@@ -6,11 +6,7 @@ on:
       mode:
         description: 'Select the mode to test'
         required: true
-        type: choice
-        options:
-          - debug
-          - release
-          - both
+        type: string
 
 jobs:
   ios-e2e-tests:
