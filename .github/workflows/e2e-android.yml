@@ -58,9 +58,9 @@ jobs:
         if: ${{ inputs.mode == 'release' || inputs.mode == 'both' }}
         uses: reactivecircus/android-emulator-runner@v2
         env:
-          ZC: 1,
-          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }},
-          MODE: 'release',
+          ZC: 1
+          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+          MODE: 'release'
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
@@ -75,7 +75,7 @@ jobs:
         if: ${{ inputs.mode == 'debug' || inputs.mode == 'both' }}
         uses: reactivecircus/android-emulator-runner@v2
         env:
-          MODE: 'debug',
+          MODE: 'debug'
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
