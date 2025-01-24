@@ -18,10 +18,9 @@ runs:
       id: affected-build
       continue-on-error: false
       env:
-          ZE_SECRET_TOKEN: ${{ inputs.auth_token }}
+          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
           WITH_ZE: "1"
       run: |
-        echo $ZE_SECRET_TOKEN
         if [ -z "$ZE_SECRET_TOKEN" ]; then
           echo "Error: ZE_SECRET_TOKEN is not set"
           exit 1
