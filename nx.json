@@ -6,15 +6,11 @@
   },
   "targetDefaults": {
     "bundle:ios": {
-      "outputs": [
-        "{projectRoot}/build"
-      ],
+      "outputs": ["{projectRoot}/build"],
       "cache": true
     },
     "bundle:android": {
-      "outputs": [
-        "{projectRoot}/build"
-      ],
+      "outputs": ["{projectRoot}/build"],
       "cache": true
     },
     "test": {
