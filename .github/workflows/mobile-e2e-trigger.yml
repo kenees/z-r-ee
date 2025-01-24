@@ -4,6 +4,8 @@ on: [workflow_dispatch]
 
 jobs:
   zephyr-deployment:
+    env:
+        ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
     uses: ./.github/workflows/zephyr-deployment.yml
 
   # android-tests:
