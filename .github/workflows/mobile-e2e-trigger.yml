@@ -7,8 +7,6 @@ jobs:
     uses: ./.github/workflows/zephyr-deployment.yml
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-    with:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
 
   # android-tests:
   #   uses: ./.github/workflows/e2e-android.yml
