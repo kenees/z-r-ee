@@ -1,6 +1,12 @@
 name: Zephyr Deployment
 
-on: [workflow_call]
+on:
+  workflow_call:
+    inputs:
+      ZE_SECRET_TOKEN:
+        description: 'Zephyr token'
+        required: true
+        type: string
 
 jobs:
     zephyr-deployment:
@@ -14,7 +20,7 @@ jobs:
             - name: Deploy to Zephyr
               shell: bash
               env:
-                  ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+                  ZE_SECRET_TOKEN: ${{ inputs.ZE_SECRET_TOKEN }}
                   WITH_ZE: "1"
                   ZC: "1"
               run: |
