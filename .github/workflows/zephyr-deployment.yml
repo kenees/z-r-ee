@@ -2,13 +2,6 @@ name: Zephyr Deployment
 
 on: [workflow_call]
 
-# Needed for nx-set-shas when run on the main branch
-permissions:
-    actions: read
-    pull-requests: write
-    contents: read
-    secrets: read
-
 jobs:
     zephyr-deployment:
         runs-on: ubuntu-latest
