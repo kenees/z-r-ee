@@ -25,5 +25,5 @@ runs:
           echo "Error: ZE_SECRET_TOKEN is not set"
           exit 1
         fi
-        pnpm nx affected -t build bundle:ios:deployment
+        pnpm nx affected -t bundle:ios
       shell: bash
