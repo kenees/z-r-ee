@@ -6,11 +6,15 @@
   },
   "targetDefaults": {
     "bundle:ios": {
-      "outputs": ["{projectRoot}/build"],
+      "outputs": [
+        "{projectRoot}/build"
+      ],
       "cache": true
     },
     "bundle:android": {
-      "outputs": ["{projectRoot}/build"],
+      "outputs": [
+        "{projectRoot}/build"
+      ],
       "cache": true
     },
     "test": {
@@ -37,5 +41,6 @@
         "targetName": "jest:test"
       }
     }
-  ]
+  ],
+  "nxCloudId": "6793d1e5a43d353bb1fbd65b"
 }
