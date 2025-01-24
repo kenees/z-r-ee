@@ -7,6 +7,7 @@ permissions:
     actions: read
     pull-requests: write
     contents: read
+    secrets: read
 
 jobs:
     zephyr-deployment:
@@ -17,7 +18,6 @@ jobs:
               with:
                 fetch-depth: 0
             - uses: ./.github/actions/setup-dependencies
-            - uses: nrwl/nx-set-shas@v4
             - name: Deploy to Zephyr
               shell: bash
               env:
@@ -29,4 +29,4 @@ jobs:
                   echo "Error: ZE_SECRET_TOKEN is not set"
                   exit 1
                 fi
-                pnpm nx affected -t bundle:ios
+                pnpm nx run-many -t bundle:ios
