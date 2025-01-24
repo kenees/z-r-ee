@@ -1,6 +1,10 @@
 name: E2E iOS Tests
 
-on: [workflow_call]
+on:
+  workflow_call:
+    secrets:
+      ZE_SECRET_TOKEN:
+        description: "Zephyr secret token"
 
 jobs:
   ios-e2e-tests:
