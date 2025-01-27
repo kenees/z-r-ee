@@ -1,7 +1,13 @@
 name: Zephyr Repack Plugin E2E testing
+#on:
+#  repository_dispatch:
+#    types: [trigger-from-zephyr-packages]
+
 on:
-  repository_dispatch:
-    types: [trigger-from-zephyr-packages]
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build-zephyr-repack-plugin:
     runs-on: ubuntu-latest
