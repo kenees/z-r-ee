@@ -2,11 +2,10 @@ name: E2E Android Tests
 
 on:
   workflow_call:
-    inputs:
-      mode:
-        description: 'Select the mode to test'
+    secrets:
+      ZE_SECRET_TOKEN:
         required: true
-        type: string
+        description: "Zephyr secret token"
 
 jobs:
   android-e2e-tests:
@@ -61,27 +60,11 @@ jobs:
           script: echo "Generated AVD snapshot for caching."
 
       - name: Run Android E2E Tests on Release Mode
-        if: ${{ inputs.mode == 'release' || inputs.mode == 'both' }}
         uses: reactivecircus/android-emulator-runner@v2
         env:
           ZC: 1
           ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
           MODE: 'release'
-        with:
-          api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
-          target: ${{ env.ANDROID_EMULATOR_TARGET }}
-          arch: ${{ env.ANDROID_EMULATOR_ARCH }}
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: |
-            chmod +x ./.github/scripts/run-android-maestro-tests.sh
-            ./.github/scripts/run-android-maestro-tests.sh
-
-      - name: Run Android E2E Tests on Debug Mode
-        if: ${{ inputs.mode == 'debug' || inputs.mode == 'both' }}
-        uses: reactivecircus/android-emulator-runner@v2
-        env:
-          MODE: 'debug'
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
