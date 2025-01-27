@@ -4,6 +4,7 @@ on:
   workflow_call:
     secrets:
       ZE_SECRET_TOKEN:
+        required: true
         description: "Zephyr secret token"
 
 jobs:
