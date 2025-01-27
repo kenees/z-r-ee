@@ -1,4 +1,4 @@
-name: Zephyr Repack Plugin E2E Testing Trigger
+name: Zephyr Repack Plugin E2E testing
 #on:
 #  repository_dispatch:
 #    types: [trigger-from-zephyr-packages]
@@ -20,7 +20,7 @@ jobs:
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
     with:
-      build-zephyr-repack-plugin-locally: 'true'
+      build-zephyr-repack-plugin-locally: true
 
   android-tests:
     needs: zephyr-deployment
@@ -28,4 +28,4 @@ jobs:
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
     with:
-      build-zephyr-repack-plugin-locally: 'true'
+      build-zephyr-repack-plugin-locally: true
