@@ -32,6 +32,7 @@ jobs:
         run: |
           chmod +x ./.github/scripts/update-zephyr-repack-plugin-version.sh
           ./.github/scripts/update-zephyr-repack-plugin-version.sh
+          cat ./packages/mobile-sdk/lib/devDependencies.json
   e2e-tests:
     needs: build-zephyr-repack-plugin
     uses: ./.github/workflows/mobile-e2e-trigger.yml
