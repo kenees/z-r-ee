@@ -1,6 +1,11 @@
 name: Mobile E2E Tests Trigger
 
-on: [workflow_dispatch]
+on:
+  workflow_call:
+    secrets:
+      ZE_SECRET_TOKEN:
+        required: true
+        description: "Zephyr secret token"
 
 jobs:
   zephyr-deployment:
