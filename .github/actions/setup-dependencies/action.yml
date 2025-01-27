@@ -22,7 +22,7 @@ runs:
 
     - name: Install dependencies
       run: |
-        pnpm install --prefer-offline --frozen-lockfile
+        pnpm install
         pnpm install -g concurrently
         pnpm align-deps
         pnpm install
