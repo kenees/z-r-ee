@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [trigger-from-zephyr-packages]
 jobs:
-  test-zephyr-repack-plugin:
+  build-zephyr-repack-plugin:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -26,14 +26,9 @@ jobs:
       - name: Update Zephyr Repack Plugin version
         run: |
           chmod +x ./.github/scripts/update-zephyr-repack-plugin-version.sh
-          ./.github/scripts/update-zephyr-repack-plugin-version.sh         
-
-      - name: Run E2E tests with locally built Zephyr Repack Plugin [Android]
-        with:
-           mode: 'release'
-        uses: ./.github/workflows/e2e-android.yml
-
-      - name: Run E2E tests with locally built Zephyr Repack Plugin [iOS]
-        with:
-          mode: 'release'
-        uses: ./.github/workflows/e2e-ios.yml
+          ./.github/scripts/update-zephyr-repack-plugin-version.sh
+  e2e-tests:
+    needs: build-zephyr-repack-plugin
+    uses: ./.github/workflows/mobile-e2e-trigger.yml
+    secrets:
+      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}

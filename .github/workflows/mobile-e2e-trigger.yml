@@ -13,3 +13,9 @@ jobs:
     uses: ./.github/workflows/e2e-ios.yml
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+
+  android-tests:
+    needs: zephyr-deployment
+    uses: ./.github/workflows/e2e-android.yml
+    secrets:
+      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
