@@ -26,6 +26,3 @@ UPDATED_JSON=$(echo "$JSON_DATA" | \
   done)
 
 mv "$JSON_FILE.bak" "$JSON_FILE"
-
-# Run pnpm align-deps
-pnpm align-deps
