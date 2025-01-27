@@ -25,19 +25,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Zephyr Repack Plugin locally
-        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
-        uses: ./.github/actions/build-zephyr-repack-plugin
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Align Dependencies
-        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
-        run: |
-          pnpm align-deps
-          cat ./apps/mobile-host/package.json
-          pnpm install --no-frozen-lockfile
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -52,6 +39,19 @@ jobs:
 
       - name: Setup JS Environment and Dependencies
         uses: ./.github/actions/setup-dependencies
+
+      - name: Build Zephyr Repack Plugin locally
+        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
+        uses: ./.github/actions/build-zephyr-repack-plugin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Align Dependencies
+        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
+        run: |
+          pnpm align-deps
+          cat ./apps/mobile-host/package.json
+          pnpm install --no-frozen-lockfile
 
       - name: Cache Pods
         uses: actions/cache@v3
