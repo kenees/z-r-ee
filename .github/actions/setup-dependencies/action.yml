@@ -22,9 +22,6 @@ runs:
 
     - name: Install dependencies
       run: |
-        pnpm install
+        pnpm install --prefer-offline --frozen-lockfile
         pnpm install -g concurrently
-        pnpm align-deps
-        pnpm install
-        cat ./apps/mobile-host/package.json
       shell: bash

@@ -31,6 +31,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Align Dependencies
+        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
+        run: |
+          pnpm align-deps
+          cat ./apps/mobile-host/package.json
+          pnpm install --no-frozen-lockfile
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
