@@ -23,7 +23,7 @@ jobs:
         run: |
           REPO_URL="https://${GITHUB_TOKEN}@github.com/ZephyrCloudIO/zephyr-packages.git"
           # TODO: Change branch param from "repack-fixed" to "main" after merging this PR: https://github.com/ZephyrCloudIO/zephyr-packages/pull/4
-          git submodule add -b main $REPO_URL submodules/zephyr-packages
+          git submodule add -b master $REPO_URL submodules/zephyr-packages
           git submodule update --init --recursive
 
       - name: Build Zephyr Repack Plugin locally
