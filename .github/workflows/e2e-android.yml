@@ -6,6 +6,11 @@ on:
       ZE_SECRET_TOKEN:
         required: true
         description: "Zephyr secret token"
+    inputs:
+      build-zephyr-repack-plugin-locally:
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   android-e2e-tests:
@@ -19,6 +24,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Build Zephyr Repack Plugin locally
+        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
+        uses: ./.github/actions/build-zephyr-repack-plugin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup KVM (Required for Android Emulator)
         run: |
