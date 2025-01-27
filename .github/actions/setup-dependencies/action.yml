@@ -25,5 +25,6 @@ runs:
         pnpm install --prefer-offline --frozen-lockfile
         pnpm install -g concurrently
         pnpm align-deps
-        pnpm install --prefer-offline --frozen-lockfile
+        pnpm install
+        cat ./apps/mobile-host/package.json
       shell: bash
