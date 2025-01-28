@@ -19,6 +19,7 @@ echo "🚀 Starting iOS Maestro tests..."
 
 # Start the mobile servers in the background
 echo "🔧 Starting mobile servers..."
+pnpm install -g concurrently
 pnpm run start:mobile:concurrently & # runs in background
 echo "✅ Mobile servers started successfully."
 
