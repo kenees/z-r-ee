@@ -50,5 +50,5 @@ runs:
       run: |
         pnpm align-deps
         cat ./apps/mobile-host/package.json
-        pnpm i
+        pnpm i --no-frozen-lockfile
       shell: bash
