@@ -50,6 +50,10 @@ jobs:
         run: pnpm pods
 
       - name: Run iOS E2E Tests on Release Mode
+        env:
+          ZC: 1
+          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+          MODE: 'Release'
         run: |
           chmod +x ./.github/scripts/run-ios-maestro-tests.sh
           ./.github/scripts/run-ios-maestro-tests.sh
