@@ -53,16 +53,8 @@ jobs:
           cat ./apps/mobile-host/package.json
           pnpm install --no-frozen-lockfile
 
-      - name: Cache Pods
-        uses: actions/cache@v3
-        with:
-          path: apps/mobile-host/ios/Pods
-          key: ${{ runner.os }}-pods-${{ hashFiles('apps/mobile-host/ios/Podfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-pods-
-
       - name: Install Pods
-        run: pnpm --filter MobileHost pods
+        run: pnpm pods
 
       - name: Run iOS E2E Tests on Release Mode
         env:
