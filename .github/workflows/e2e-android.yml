@@ -59,13 +59,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Align Dependencies
-        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
-        run: |
-          pnpm align-deps
-          cat ./apps/mobile-host/package.json
-          pnpm install --no-frozen-lockfile
-
       - name: Create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2

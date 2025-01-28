@@ -31,9 +31,7 @@ runs:
 
     - name: Install "zephyr-packages" dependencies
       working-directory: submodules/zephyr-packages
-      run: |
-        pnpm install --prefer-offline --frozen-lockfile
-        pnpm install -g concurrently
+      run: pnpm i
       shell: bash
 
     - name: Build Zephyr Repack Plugin
@@ -46,4 +44,11 @@ runs:
         chmod +x ./.github/scripts/update-zephyr-repack-plugin-version.sh
         ./.github/scripts/update-zephyr-repack-plugin-version.sh
         cat ./packages/mobile-sdk/lib/devDependencies.json
+      shell: bash
+
+    - name: Align Dependencies
+      run: |
+        pnpm align-deps
+        cat ./apps/mobile-host/package.json
+        pnpm i
       shell: bash
