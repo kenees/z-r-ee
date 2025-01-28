@@ -72,10 +72,6 @@ jobs:
 
       - name: Run Android E2E Tests on Release Mode
         uses: reactivecircus/android-emulator-runner@v2
-        env:
-          ZC: 1
-          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-          MODE: 'release'
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
