@@ -20,7 +20,7 @@ jobs:
       RUBY_VERSION: 2.7.6
       MAESTRO_VERSION: 1.39.4
       SIMULATOR_NAME: "iPhone 15 Pro Max"
-      MAESTRO_DRIVER_STARTUP_TIMEOUT: 120000
+      MAESTRO_DRIVER_STARTUP_TIMEOUT: 240000
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
