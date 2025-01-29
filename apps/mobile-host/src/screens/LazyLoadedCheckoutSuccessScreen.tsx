@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {LoadingScreen} from 'mobile-core';
+import {LoadingScreen, useAuthStore} from 'mobile-core';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import {CheckoutSuccessNavigationProps} from '../navigation/types';
@@ -14,9 +14,15 @@ const CheckoutSuccessScreen = React.lazy(() => {
 type Props = CheckoutSuccessNavigationProps;
 
 const LazyLoadedCheckoutSuccessScreen = ({navigation}: Props) => {
+  const {user} = useAuthStore();
   const handleDismiss = () => {
     navigation.popToTop();
-    navigation.jumpTo('Home');
+
+    if (user) {
+      navigation.jumpTo('Orders');
+    } else {
+      navigation.jumpTo('Home');
+    }
   };
 
   return (

@@ -1,5 +1,10 @@
 # React Native super app
 
+| iOS | Android |
+| --- | --- |
+| <img src="./docs/ios_demo.gif" alt="iOS Demo" width="300"> | <img src="./docs/android_demo.gif" alt="Android Demo" width="300"> |
+
+
 ## Architecture Overview
 
 Below you can find diagrams that illustrate the architecture of the React Native super app.

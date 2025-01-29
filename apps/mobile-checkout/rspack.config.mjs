@@ -125,6 +125,10 @@ export default env => {
                   'react-native': '0.74',
                 },
               },
+              assumptions: {
+                setPublicClassFields: true,
+                privateFieldsAsProperties: true,
+              },
               jsc: {
                 externalHelpers: true,
                 transform: {
