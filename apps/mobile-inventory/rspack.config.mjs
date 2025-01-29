@@ -1,8 +1,8 @@
 import {createRequire} from 'node:module';
 import * as Repack from '@callstack/repack';
 import rspack from '@rspack/core';
-import {getSharedDependencies} from 'mobile-sdk';
 import path from 'node:path';
+import {getSharedDependencies} from 'mobile-sdk';
 import {withZephyr} from 'zephyr-repack-plugin';
 
 /**
@@ -118,10 +118,6 @@ export default env => {
                 targets: {
                   'react-native': '0.74',
                 },
-              },
-              assumptions: {
-                setPublicClassFields: true,
-                privateFieldsAsProperties: true,
               },
               jsc: {
                 externalHelpers: true,
