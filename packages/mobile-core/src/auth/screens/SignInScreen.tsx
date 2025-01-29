@@ -52,7 +52,8 @@ export const SignInScreen = () => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <TouchableWithoutFeedback
         accessibilityRole="button"
-        onPress={Keyboard.dismiss}>
+        onPress={Keyboard.dismiss}
+        accessible={false}>
         <View
           style={[
             styles.container,
