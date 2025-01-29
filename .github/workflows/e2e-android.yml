@@ -14,6 +14,7 @@ on:
 
 jobs:
   android-e2e-tests:
+    timeout-minutes: 30 # Set a timeout for the job to prevent it from running indefinitely
     runs-on: ubuntu-latest
     env:
       MAESTRO_VERSION: 1.39.4
