@@ -10,9 +10,6 @@ overrides:
 packageExtensionsChecksum: 8ef419e19eaecb914266a5018a46b582
 
 patchedDependencies:
-  '@callstack/repack':
-    hash: kik27ufqq53uhf52kg2o542fkm
-    path: patches/@callstack__repack.patch
   '@react-native/community-cli-plugin':
     hash: gdpi5rwh3blcwxgyspzwxjdb6a
     path: patches/@react-native__community-cli-plugin.patch
@@ -128,8 +125,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.1)(ts-node@10.9.1(@types/node@22.10.1)(typescript@5.6.3)))(typescript@5.6.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.3
-        version: 5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
+        specifier: 5.0.0-rc.10
+        version: 5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.2(typescript@5.6.3)
@@ -261,8 +258,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.1)(ts-node@10.9.1(@types/node@22.10.1)(typescript@5.6.3)))(typescript@5.6.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.3
-        version: 5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
+        specifier: 5.0.0-rc.10
+        version: 5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.2(typescript@5.6.3)
@@ -405,8 +402,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.1)(ts-node@10.9.1(@types/node@22.10.1)(typescript@5.6.3)))(typescript@5.6.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.3
-        version: 5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
+        specifier: 5.0.0-rc.10
+        version: 5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.2(typescript@5.6.3)
@@ -550,8 +547,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.1)(ts-node@10.9.1(@types/node@22.10.1)(typescript@5.6.3)))(typescript@5.6.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.3
-        version: 5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
+        specifier: 5.0.0-rc.10
+        version: 5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.2(typescript@5.6.3)
@@ -686,8 +683,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.1)(ts-node@10.9.1(@types/node@22.10.1)(typescript@5.6.3)))(typescript@5.6.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.3
-        version: 5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.1)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
+        specifier: 5.0.0-rc.10
+        version: 5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.1)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.2(typescript@5.6.3)
@@ -1575,8 +1572,8 @@ packages:
     peerDependencies:
       react: '>=16.3.0'
 
-  '@callstack/repack-dev-server@5.0.0-rc.3':
-    resolution: {integrity: sha512-lyF/miApdY0mqRkdeDV0rgVL2eWFT2aTeh0j71kkwxHuiLVNWCZgvdHzizam3sFUX8z0tLqxP2ggYcjnWQmr0w==}
+  '@callstack/repack-dev-server@5.0.0-rc.10':
+    resolution: {integrity: sha512-wRAdsGYb531xeJlgKxrRmSdQvfmwt/eaSz6lJwEV3TBIW4McLNcR15jCTG3HXeg4OFjFhezksbXUtsHryUWS+A==}
     engines: {node: '>=18'}
     peerDependencies:
       '@react-native-community/cli-server-api': '>=13.6.4'
@@ -1584,8 +1581,8 @@ packages:
       '@react-native-community/cli-server-api':
         optional: true
 
-  '@callstack/repack@5.0.0-rc.3':
-    resolution: {integrity: sha512-eryRfOdGebtPu+VoKso6YQVoqCKKdUurjVX062YaqgZnLmGhON6SjHHBlULRlMV6niP9dcCL9ggZMGfyzL4bDw==}
+  '@callstack/repack@5.0.0-rc.10':
+    resolution: {integrity: sha512-B+9pcWVrPRD+foy9X8rk3cpXSk3tY4qT9ZkvUNKeN74bQp3qZI6kL5gd83dmkemsIHaNKopleP8R/3Q/YqGKgg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@module-federation/enhanced': '>=0.6.10'
@@ -4251,6 +4248,9 @@ packages:
   estraverse@5.3.0:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
+
+  estree-util-is-identifier-name@1.1.0:
+    resolution: {integrity: sha512-OVJZ3fGGt9By77Ix9NhaRbzfbDV/2rx9EP7YIDJTmsZSEc5kYn2vWcNccYyahJL2uAQZK2a5Or2i0wtIKTPoRQ==}
 
   estree-walker@0.6.1:
     resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
@@ -8326,7 +8326,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 18.3.1
 
-  '@callstack/repack-dev-server@5.0.0-rc.3(@react-native-community/cli-server-api@15.1.2)':
+  '@callstack/repack-dev-server@5.0.0-rc.10(@react-native-community/cli-server-api@15.1.2)':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@fastify/middie': 8.3.3
@@ -8345,15 +8345,17 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@callstack/repack@5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.1)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)':
+  '@callstack/repack@5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.1)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)':
     dependencies:
-      '@callstack/repack-dev-server': 5.0.0-rc.3(@react-native-community/cli-server-api@15.1.2)
+      '@callstack/repack-dev-server': 5.0.0-rc.10(@react-native-community/cli-server-api@15.1.2)
       '@discoveryjs/json-ext': 0.5.7
       '@react-native-community/cli': 15.1.2(typescript@5.6.3)
       '@react-native-community/cli-types': 15.1.2
       '@rspack/plugin-react-refresh': 1.0.0(react-refresh@0.14.2)
+      babel-loader: 9.2.1(@babel/core@7.26.0)(webpack@5.96.1)
       colorette: 2.0.20
       dedent: 0.7.0
+      estree-util-is-identifier-name: 1.1.0
       events: 3.3.0
       execa: 5.1.1
       flow-remove-types: 2.253.0
@@ -8372,20 +8374,23 @@ snapshots:
       '@rspack/core': 1.1.6(@swc/helpers@0.5.15)
       webpack: 5.96.1
     transitivePeerDependencies:
+      - '@babel/core'
       - '@react-native-community/cli-server-api'
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  '@callstack/repack@5.0.0-rc.3(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)':
+  '@callstack/repack@5.0.0-rc.10(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1))(@react-native-community/cli-server-api@15.1.2)(@react-native-community/cli-types@15.1.2)(@react-native-community/cli@15.1.2(typescript@5.6.3))(@rspack/core@1.1.6(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.2)(@types/react@18.3.12)(encoding@0.1.13)(react@18.3.1))(webpack@5.96.1)':
     dependencies:
-      '@callstack/repack-dev-server': 5.0.0-rc.3(@react-native-community/cli-server-api@15.1.2)
+      '@callstack/repack-dev-server': 5.0.0-rc.10(@react-native-community/cli-server-api@15.1.2)
       '@discoveryjs/json-ext': 0.5.7
       '@react-native-community/cli': 15.1.2(typescript@5.6.3)
       '@react-native-community/cli-types': 15.1.2
       '@rspack/plugin-react-refresh': 1.0.0(react-refresh@0.14.2)
+      babel-loader: 9.2.1(@babel/core@7.26.0)(webpack@5.96.1)
       colorette: 2.0.20
       dedent: 0.7.0
+      estree-util-is-identifier-name: 1.1.0
       events: 3.3.0
       execa: 5.1.1
       flow-remove-types: 2.253.0
@@ -8404,6 +8409,7 @@ snapshots:
       '@rspack/core': 1.1.6(@swc/helpers@0.5.15)
       webpack: 5.96.1
     transitivePeerDependencies:
+      - '@babel/core'
       - '@react-native-community/cli-server-api'
       - bufferutil
       - supports-color
@@ -11818,6 +11824,8 @@ snapshots:
   estraverse@4.3.0: {}
 
   estraverse@5.3.0: {}
+
+  estree-util-is-identifier-name@1.1.0: {}
 
   estree-walker@0.6.1:
     optional: true
