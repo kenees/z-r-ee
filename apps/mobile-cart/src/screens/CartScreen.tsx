@@ -40,7 +40,7 @@ export default function CartScreen({onCheckoutSuccess}: Props) {
   }
 
   return (
-    <ModuleBoundary color={colors.moduleBoundaries.cart} borderStyle="dotted">
+    <ModuleBoundary withTopRadius color={colors.moduleBoundaries.cart}>
       <View style={[styles.container]}>
         <FlatList
           style={styles.list}
@@ -56,15 +56,13 @@ export default function CartScreen({onCheckoutSuccess}: Props) {
             />
           )}
         />
-        <ModuleBoundary color={colors.moduleBoundaries.checkout}>
-          <View style={styles.checkoutContainer}>
-            <ErrorBoundary name="CheckoutSuccessScreen">
-              <React.Suspense fallback={<ActivityIndicator />}>
-                <CheckoutSection onCheckoutSuccess={onCheckoutSuccess} />
-              </React.Suspense>
-            </ErrorBoundary>
-          </View>
-        </ModuleBoundary>
+        <View style={styles.checkoutContainer}>
+          <ErrorBoundary name="CheckoutSuccessScreen">
+            <React.Suspense fallback={<ActivityIndicator />}>
+              <CheckoutSection onCheckoutSuccess={onCheckoutSuccess} />
+            </React.Suspense>
+          </ErrorBoundary>
+        </View>
       </View>
     </ModuleBoundary>
   );

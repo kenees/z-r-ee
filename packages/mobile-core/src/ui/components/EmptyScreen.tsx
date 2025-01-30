@@ -16,7 +16,7 @@ export function EmptyScreen({icon, title, boundaryColor}: Props) {
   const theme = useTheme();
 
   return (
-    <ModuleBoundary color={boundaryColor} borderStyle="dotted">
+    <ModuleBoundary withTopRadius color={boundaryColor}>
       <View
         style={[styles.container, {backgroundColor: theme.colors.background}]}>
         <Icon source={icon} size={100} />

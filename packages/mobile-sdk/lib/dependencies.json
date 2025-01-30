@@ -54,5 +54,9 @@
   "react-native-config": {
     "name": "react-native-config",
     "version": "1.5.3"
+  },
+  "react-native-screen-corner-radius": {
+    "name": "react-native-screen-corner-radius",
+    "version": "0.2.2"
   }
 }

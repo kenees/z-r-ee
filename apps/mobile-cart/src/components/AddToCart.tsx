@@ -40,7 +40,7 @@ export default function AddToCart({
   };
 
   return (
-    <ModuleBoundary color={colors.moduleBoundaries.cart} borderStyle="dotted">
+    <ModuleBoundary color={colors.moduleBoundaries.cart}>
       <View style={styles.addToCartOverlay}>
         <View style={styles.priceContainer}>
           <Text style={styles.priceText}>
