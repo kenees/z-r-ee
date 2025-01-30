@@ -1,10 +1,12 @@
 import React, {ReactNode} from 'react';
-import {ColorValue, StyleSheet, View, ViewStyle} from 'react-native';
-
-// @ts-ignore
-import {ScreenCornerRadius} from 'react-native-screen-corner-radius';
+import {ColorValue, Platform, StyleSheet, View} from 'react-native';
 
 import {useModuleBoundaryStore} from '../../utils';
+
+const getCornerRadius = Platform.select({
+  ios: () => require('react-native-screen-corner-radius').ScreenCornerRadius,
+  default: () => 0,
+});
 
 export const ModuleBoundary = ({
   color,
@@ -32,14 +34,8 @@ export const ModuleBoundary = ({
           {
             borderColor: color,
           },
-          withTopRadius && {
-            borderTopLeftRadius: ScreenCornerRadius,
-            borderTopRightRadius: ScreenCornerRadius,
-          },
-          withBottomRadius && {
-            borderBottomLeftRadius: ScreenCornerRadius,
-            borderBottomRightRadius: ScreenCornerRadius,
-          },
+          withTopRadius && styles.topRadius,
+          withBottomRadius && styles.bottomRadius,
         ]}
       />
       {children}
@@ -60,5 +56,13 @@ const styles = StyleSheet.create({
     height: '100%',
     borderWidth: 8,
     borderStyle: 'dotted',
+  },
+  topRadius: {
+    borderTopLeftRadius: getCornerRadius(),
+    borderTopRightRadius: getCornerRadius(),
+  },
+  bottomRadius: {
+    borderBottomLeftRadius: getCornerRadius(),
+    borderBottomRightRadius: getCornerRadius(),
   },
 });
