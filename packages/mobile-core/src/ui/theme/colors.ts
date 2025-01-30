@@ -61,10 +61,10 @@ export const theme = {
 };
 
 export const moduleBoundaries = {
-  cart: 'red',
-  inventory: 'blue',
-  checkout: 'green',
-  orders: 'purple',
+  cart: '#A1151A',
+  inventory: '#05547F',
+  checkout: '#538B5F',
+  orders: '#2A2E4D',
 };
 
 export default {

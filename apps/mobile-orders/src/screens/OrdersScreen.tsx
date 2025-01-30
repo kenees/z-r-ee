@@ -36,7 +36,7 @@ export default function CartScreen() {
   }
 
   return (
-    <ModuleBoundary color={colors.moduleBoundaries.orders} borderStyle="dotted">
+    <ModuleBoundary withTopRadius color={colors.moduleBoundaries.orders}>
       <View style={[styles.container, {paddingTop: top}]}>
         <View style={styles.headerContainer}>
           <Text variant="headlineLarge">{t('list.headline')}</Text>

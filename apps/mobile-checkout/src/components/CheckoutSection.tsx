@@ -5,6 +5,7 @@ import {
   Button,
   CartItem,
   colors,
+  ModuleBoundary,
   Product,
   Text,
   useAuthStore,
@@ -52,17 +53,19 @@ const CheckoutSection = ({onCheckoutSuccess}: Props) => {
   };
 
   return (
-    <VStack style={styles.container}>
-      <Text variant="titleLarge" style={styles.price}>
-        {t('total_price', {price: calculateTotal(items, data).toFixed(2)})}
-      </Text>
-      <Button
-        testID="cartScreen.checkoutButton"
-        onPress={handleCheckout}
-        mode="contained">
-        {user !== null ? t('checkout') : t('guest_checkout')}
-      </Button>
-    </VStack>
+    <ModuleBoundary color={colors.moduleBoundaries.checkout}>
+      <VStack style={styles.container}>
+        <Text variant="titleLarge" style={styles.price}>
+          {t('total_price', {price: calculateTotal(items, data).toFixed(2)})}
+        </Text>
+        <Button
+          testID="cartScreen.checkoutButton"
+          onPress={handleCheckout}
+          mode="contained">
+          {user !== null ? t('checkout') : t('guest_checkout')}
+        </Button>
+      </VStack>
+    </ModuleBoundary>
   );
 };
 
