@@ -3,6 +3,8 @@ import {FlatList, StyleSheet, View} from 'react-native';
 
 import {
   ActivityIndicator,
+  colors,
+  ModuleBoundary,
   Navbar,
   useProducts,
   useResponsiveSizes,
@@ -20,35 +22,37 @@ const HomeScreen = ({onProductPress}: Props) => {
   const {data, isLoading} = useProducts();
 
   return (
-    <View style={styles.container}>
-      <Navbar testID="homeScreen.navbar" />
-      <FlatList
-        testID="homeScreen.productsList"
-        style={styles.listContainer}
-        contentContainerStyle={styles.contentContainer}
-        data={data}
-        numColumns={2}
-        keyExtractor={item => item.id}
-        ListEmptyComponent={() => {
-          if (isLoading) {
-            return (
-              <View style={styles.loadingIndicatorWrapper}>
-                <ActivityIndicator size="large" />
-              </View>
-            );
-          }
+    <ModuleBoundary withTopRadius color={colors.moduleBoundaries.inventory}>
+      <View style={styles.container}>
+        <Navbar testID="homeScreen.navbar" />
+        <FlatList
+          testID="homeScreen.productsList"
+          style={styles.listContainer}
+          contentContainerStyle={styles.contentContainer}
+          data={data}
+          numColumns={2}
+          keyExtractor={item => item.id}
+          ListEmptyComponent={() => {
+            if (isLoading) {
+              return (
+                <View style={styles.loadingIndicatorWrapper}>
+                  <ActivityIndicator size="large" />
+                </View>
+              );
+            }
 
-          return null;
-        }}
-        renderItem={({item, index}) => (
-          <HomeProduct
-            testID={`homeScreen.productsListItem.${index}`}
-            item={item}
-            onPress={() => onProductPress(item.id)}
-          />
-        )}
-      />
-    </View>
+            return null;
+          }}
+          renderItem={({item, index}) => (
+            <HomeProduct
+              testID={`homeScreen.productsListItem.${index}`}
+              item={item}
+              onPress={() => onProductPress(item.id)}
+            />
+          )}
+        />
+      </View>
+    </ModuleBoundary>
   );
 };
 const useStyles = () => {

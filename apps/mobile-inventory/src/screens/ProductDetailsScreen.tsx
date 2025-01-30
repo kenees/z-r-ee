@@ -1,7 +1,14 @@
 import React, {Suspense, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import {Card, LoadingScreen, Text, useProducts} from 'mobile-core';
+import {
+  Card,
+  colors,
+  LoadingScreen,
+  ModuleBoundary,
+  Text,
+  useProducts,
+} from 'mobile-core';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import ProductDetails from '../components/ProductDetails';
@@ -33,32 +40,35 @@ export default ({goBack, goToCart, productId}: Props) => {
     }
   }, [product]);
 
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
-
-  if (!product) {
-    return <Text>Item not found.</Text>;
-  }
-
   return (
-    <View style={styles.container}>
-      <ProductDetailsNavbar goBack={goBack} goToCart={goToCart} />
-      <ProductDetails
-        product={product}
-        onColorChange={setSelectedColor}
-        onSizeChange={setSelectedSize}
-      />
-      <Card style={styles.actionsCard}>
-        <Suspense>
-          <AddToCart
-            product={product}
-            selectedSize={selectedSize}
-            selectedColor={selectedColor}
-          />
-        </Suspense>
-      </Card>
-    </View>
+    <ModuleBoundary
+      withBottomRadius
+      withTopRadius
+      color={colors.moduleBoundaries.inventory}>
+      <View style={styles.container}>
+        {isLoading && <LoadingScreen />}
+        {!product && !isLoading && <Text>Item not found.</Text>}
+        {product && !isLoading && (
+          <>
+            <ProductDetailsNavbar goBack={goBack} goToCart={goToCart} />
+            <ProductDetails
+              product={product}
+              onColorChange={setSelectedColor}
+              onSizeChange={setSelectedSize}
+            />
+            <Card style={styles.actionsCard}>
+              <Suspense>
+                <AddToCart
+                  product={product}
+                  selectedSize={selectedSize}
+                  selectedColor={selectedColor}
+                />
+              </Suspense>
+            </Card>
+          </>
+        )}
+      </View>
+    </ModuleBoundary>
   );
 };
 

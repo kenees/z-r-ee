@@ -57,7 +57,10 @@ const CheckoutSuccessScreen = ({onDismiss}: Props) => {
   );
 
   return (
-    <ModuleBoundary color={colors.moduleBoundaries.checkout}>
+    <ModuleBoundary
+      withBottomRadius
+      withTopRadius
+      color={colors.moduleBoundaries.checkout}>
       <VStack style={[styles.container, {marginTop: top}]}>
         <View />
         <VStack style={styles.textsWrapper}>
