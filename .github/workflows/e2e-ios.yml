@@ -14,7 +14,7 @@ on:
 
 jobs:
   ios-e2e-tests:
-    timeout-minutes: 45 # Set a timeout for the job to prevent it from running indefinitely
+    timeout-minutes: 60 # Set a timeout for the job to prevent it from running indefinitely
     runs-on: macos-latest
     env:
       RUBY_VERSION: 2.7.6
