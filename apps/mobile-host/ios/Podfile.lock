@@ -1,6 +1,6 @@
 PODS:
   - boost (1.84.0)
-  - callstack-repack (5.0.0-rc.7):
+  - callstack-repack (5.0.0-rc.10):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -32,7 +32,7 @@ PODS:
   - hermes-engine/Pre-built (0.76.1)
   - JWTDecode (3.0.1)
   - lottie-ios (4.5.0)
-  - lottie-react-native (7.1.0):
+  - lottie-react-native (7.2.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1382,6 +1382,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - react-native-screen-corner-radius (0.2.2):
+    - React
   - React-nativeconfig (0.76.1)
   - React-NativeModulesApple (0.76.1):
     - glog
@@ -1649,7 +1651,7 @@ PODS:
     - React-logger (= 0.76.1)
     - React-perflogger (= 0.76.1)
     - React-utils (= 0.76.1)
-  - RNBootSplash (6.3.1):
+  - RNBootSplash (6.3.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1807,6 +1809,7 @@ DEPENDENCIES:
   - react-native-mmkv (from `../node_modules/react-native-mmkv`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-screen-corner-radius (from `../node_modules/react-native-screen-corner-radius`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1931,6 +1934,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-screen-corner-radius:
+    :path: "../node_modules/react-native-screen-corner-radius"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1998,7 +2003,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 1dca942403ed9342f98334bf4c3621f011aa7946
-  callstack-repack: 2123b3815ead4c2586f8c11e9c1160fd7435df03
+  callstack-repack: 09da80246950d7e11ad3d61e021ed2c46417e230
   DoubleConversion: f16ae600a246532c4020132d54af21d0ddb2a385
   FBLazyVector: 7075bb12898bc3998fd60f4b7ca422496cc2cdf7
   fmt: 10c6e61f4be25dc963c36bd73fc7b1705fe975be
@@ -2006,7 +2011,7 @@ SPEC CHECKSUMS:
   hermes-engine: 46f1ffbf0297f4298862068dd4c274d4ac17a1fd
   JWTDecode: 2eed97c2fa46ccaf3049a787004eedf0be474a87
   lottie-ios: a881093fab623c467d3bce374367755c272bdd59
-  lottie-react-native: f6bc5e59ad94cb15984cfe5010e803532259c056
+  lottie-react-native: c357cb605ae09612037efc3862216fd1163fbb78
   RCT-Folly: 84578c8756030547307e4572ab1947de1685c599
   RCTDeprecation: fde92935b3caa6cb65cbff9fbb7d3a9867ffb259
   RCTRequired: 75c6cee42d21c1530a6f204ba32ff57335d19007
@@ -2040,6 +2045,7 @@ SPEC CHECKSUMS:
   react-native-mmkv: eca12be5e3400be2d995a2edaa3c6c2e67b5e3ec
   react-native-netinfo: cec9c4e86083cb5b6aba0e0711f563e2fbbff187
   react-native-safe-area-context: 0f16e24dc808e9f0ced17f2bdcec692b2376fb68
+  react-native-screen-corner-radius: 81229df69e6f990502b813b92a0e8267c64d9dd9
   React-nativeconfig: 93fe8c85a8c40820c57814e30f3e44b94c995a7b
   React-NativeModulesApple: a4457b73e63e983db66d66612160006bccb00ad5
   React-perflogger: 3140b7778984a486db80d4d2aeaa266cae4eb8c7
@@ -2067,7 +2073,7 @@ SPEC CHECKSUMS:
   React-utils: 0c825829a8e2ca39bb049d95f270a2dbf39ecb05
   ReactCodegen: 3b0ff1c9015e3ebcf2bd2f8559995c74bfacf8a1
   ReactCommon: c21a3d6a8d3e98b6e99730139a52f59f0beea89d
-  RNBootSplash: 2f3d6c7dd96a2f145b96bd741ce8e170714e0514
+  RNBootSplash: b699ef992152e6f85403e9c308f690a7baf384a6
   RNLocalize: 176bce32b3f2a3ce7ad318acd677badcbfd1e9df
   RNScreens: 74536418fef8086457d39df36a55b36efd5329c9
   RNVectorIcons: a24016b773380b1aa37fca501ec6b94a951890a0
