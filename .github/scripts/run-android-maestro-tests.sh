@@ -24,9 +24,9 @@ ZC="$ZC" ZE_SECRET_TOKEN="$ZE_SECRET_TOKEN" pnpm run start:mobile:concurrently &
 echo "✅ Mobile servers started successfully."
 
 # Run adb reverse scripts to set up port forwarding
-#echo "🔄 Running adbreverse scripts to set up port forwarding..."
-#pnpm adbreverse
-#echo "✅ adbreverse executed successfully."
+echo "🔄 Running adbreverse scripts to set up port forwarding..."
+pnpm adbreverse
+echo "✅ adbreverse executed successfully."
 
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
