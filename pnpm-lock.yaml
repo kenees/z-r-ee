@@ -200,8 +200,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20241121202227
-        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
+        specifier: 0.0.0-canary-20250130213446
+        version: 0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1)
 
   apps/mobile-checkout:
     dependencies:
@@ -336,8 +336,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20241121202227
-        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
+        specifier: 0.0.0-canary-20250130213446
+        version: 0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1)
 
   apps/mobile-e2e: {}
 
@@ -492,8 +492,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20241121202227
-        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
+        specifier: 0.0.0-canary-20250130213446
+        version: 0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1)
     dependenciesMeta:
       mobile-core:
         injected: true
@@ -631,8 +631,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20241121202227
-        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
+        specifier: 0.0.0-canary-20250130213446
+        version: 0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1)
     dependenciesMeta:
       mobile-core:
         injected: true
@@ -770,8 +770,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20241121202227
-        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
+        specifier: 0.0.0-canary-20250130213446
+        version: 0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1)
 
   packages/mobile-core:
     dependencies:
@@ -7475,17 +7475,14 @@ packages:
   youch@3.3.4:
     resolution: {integrity: sha512-UeVBXie8cA35DS6+nBkls68xaBBXCye0CNznrhszZjTbRVnJKQuNsyLKBTTL4ln1o1rh2PKtv35twV7irj5SEg==}
 
-  zephyr-agent@0.0.0-canary-20241121193105:
-    resolution: {integrity: sha512-f9rcKG7LemgZRmP14O3ck5xd3RDsQmByh5c6IgkryK9f+pZzGPtlbddAaTLJh7Ho9EdY9FbfeuepAFDMTh/DyQ==}
-
   zephyr-agent@0.0.0-canary-20241122011536:
     resolution: {integrity: sha512-F0zxqRFqkHgIH4T1BFDUR/4H+9E3XpRewNO3j5L8EVNsi39Lq4c6NfykWkop3vvBSEdkpC02hEeoe5zz0ygnCg==}
 
   zephyr-agent@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-2O8BYLaxsSzZh0Ry6wenUzkOMhpyqrYAwzZLpkFlvBEUkSk4V9Ay0LZCo8DZ6+az+i5fGBF5iew0bbyNWMHBGQ==}
 
-  zephyr-edge-contract@0.0.0-canary-20241121193105:
-    resolution: {integrity: sha512-BT1HLxnbP0lY/ezpRBZWELiUnU1iv3FI4v1T2jHd7yNs01b4WZ5m+ZY5g1hGo81wC4K9MIt9vhJexR8MTVXHZA==}
+  zephyr-agent@0.0.0-canary-20250130213446:
+    resolution: {integrity: sha512-GT/y8OpvI9GsfC/TNWprxjRdErzfW+ZgmvA8cRY/riQVb0GImhfTIusxMQZRBDzITssxQb4tIK8yJie9uo76cA==}
 
   zephyr-edge-contract@0.0.0-canary-20241122011536:
     resolution: {integrity: sha512-syoNnvSK3oOJjvyPE5YrO7x1PRpTEG2xHmA47S/MbuQcrnE/gUNrL0hiwGG1+I32SsIj7zWgirjPw8XVmGaD0g==}
@@ -7493,14 +7490,20 @@ packages:
   zephyr-edge-contract@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-tFkhBh1ISSFp5q3yQcKG1Bqi5jOEr2MifxLB0E2AdsG0SsUooSHwKYBNNyJIgsRa3v2xvthBV2OVcA/QX5ha7w==}
 
-  zephyr-repack-plugin@0.0.0-canary-20241121202227:
-    resolution: {integrity: sha512-aXsUxRcakQIx6eflVW7P0GbCTL9lSHA51LMxBYpvESfQNtx03D13WKo/CKLU1ZZpuV2U9sihYId1X3KdHJKSAw==}
+  zephyr-edge-contract@0.0.0-canary-20250130213446:
+    resolution: {integrity: sha512-JKpU3RoAOFJegE+awXG4nfAJcA9trs6ydHrD/K7SM1nQShSyokPjzP9S7uxlZlxK9eDa/qWLog0UxKXKQuhyHg==}
+
+  zephyr-repack-plugin@0.0.0-canary-20250130213446:
+    resolution: {integrity: sha512-jkXNB2wX2CAx/Bsm3EwNU8Jjzf1Y7S3874j5V2mRGGpgJvGSx9XJiCk+QnC7tS8SC3eGq4ohoWnpRH+00F/ngA==}
 
   zephyr-rspack-plugin@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-enrneMuU6ccxdmHPwctRE03G2OimR5jtDtOaRnVHRAcQdzre9dEBuIPFi8aT9xmcbHJz3AEVY7gNJrQXHcsrRw==}
 
   zephyr-xpack-internal@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-aH3mvSnjXpNtdCHNmJN5Zmv1J4+4qJ7Uv9d+T8JhqZNCVC5OsI9w0g0MIymRfaJnHcdWjjZCryIynaDLWqnxaA==}
+
+  zephyr-xpack-internal@0.0.0-canary-20250130213446:
+    resolution: {integrity: sha512-bggGBBpq8sJpXCOre9v2/6jmQufwyxz6Aks1a946p/Fn9tz1ZX/BTxArqUwqOTtk8apabC/GcxUe26BPKP1JAg==}
 
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
@@ -15666,26 +15669,6 @@ snapshots:
       stacktracey: 2.1.8
     optional: true
 
-  zephyr-agent@0.0.0-canary-20241121193105(encoding@0.1.13):
-    dependencies:
-      cloudflare: 3.5.0(encoding@0.1.13)
-      git-url-parse: 15.0.0
-      is-ci: 3.0.1
-      jose: 5.9.6
-      open: 10.1.0
-      socket.io-client: 4.8.1
-      tslib: 2.8.1
-      uuid: 8.3.2
-      zephyr-edge-contract: 0.0.0-canary-20241121193105
-    optionalDependencies:
-      wrangler: 3.103.2
-    transitivePeerDependencies:
-      - '@cloudflare/workers-types'
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
-
   zephyr-agent@0.0.0-canary-20241122011536(encoding@0.1.13):
     dependencies:
       cloudflare: 3.5.0(encoding@0.1.13)
@@ -15728,13 +15711,27 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  zephyr-edge-contract@0.0.0-canary-20241121193105:
+  zephyr-agent@0.0.0-canary-20250130213446(encoding@0.1.13):
     dependencies:
+      cloudflare: 3.5.0(encoding@0.1.13)
       debug: 4.4.0
+      git-url-parse: 15.0.0
+      is-ci: 3.0.1
+      jose: 5.9.6
       node-persist: 4.0.4
+      open: 10.1.0
+      socket.io-client: 4.8.1
       tslib: 2.8.1
+      uuid: 8.3.2
+      zephyr-edge-contract: 0.0.0-canary-20250130213446
+    optionalDependencies:
+      wrangler: 3.103.2
     transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - bufferutil
+      - encoding
       - supports-color
+      - utf-8-validate
 
   zephyr-edge-contract@0.0.0-canary-20241122011536:
     dependencies:
@@ -15744,16 +15741,21 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  zephyr-repack-plugin@0.0.0-canary-20241121202227(encoding@0.1.13):
+  zephyr-edge-contract@0.0.0-canary-20250130213446:
     dependencies:
-      zephyr-agent: 0.0.0-canary-20241121193105(encoding@0.1.13)
-      zephyr-edge-contract: 0.0.0-canary-20241121193105
+      tslib: 2.8.1
+
+  zephyr-repack-plugin@0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1):
+    dependencies:
+      zephyr-agent: 0.0.0-canary-20250130213446(encoding@0.1.13)
+      zephyr-xpack-internal: 0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - bufferutil
       - encoding
       - supports-color
       - utf-8-validate
+      - webpack
 
   zephyr-rspack-plugin@0.0.0-canary-20241122175815(@swc/helpers@0.5.15)(webpack@5.97.1):
     dependencies:
@@ -15793,6 +15795,21 @@ snapshots:
       - uglify-js
       - utf-8-validate
       - webpack-cli
+
+  zephyr-xpack-internal@0.0.0-canary-20250130213446(encoding@0.1.13)(webpack@5.97.1):
+    dependencies:
+      '@module-federation/automatic-vendor-federation': 1.2.1(webpack@5.97.1)
+      is-ci: 3.0.1
+      tslib: 2.8.1
+      zephyr-agent: 0.0.0-canary-20250130213446(encoding@0.1.13)
+      zephyr-edge-contract: 0.0.0-canary-20250130213446
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+      - webpack
 
   zod@3.24.1:
     optional: true
