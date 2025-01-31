@@ -106,7 +106,7 @@
   },
   "zephyr-repack-plugin": {
     "name": "zephyr-repack-plugin",
-    "version": "0.0.0-canary-20250121175535",
+    "version": "0.0.0-canary-20250130213446",
     "devOnly": true
   },
   "@rsdoctor/rspack-plugin": {
