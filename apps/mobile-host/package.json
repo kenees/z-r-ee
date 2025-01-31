@@ -74,7 +74,7 @@
     "reactotron-react-native": "^5.1.12",
     "typescript": "^5.6.3",
     "webpack": "^5.95.0",
-    "zephyr-repack-plugin": "0.0.0-canary-20250130213446"
+    "zephyr-repack-plugin": "0.0.0-canary-20241121202227"
   },
   "rnx-kit": {
     "kitType": "app",
