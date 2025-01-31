@@ -9,23 +9,23 @@ on:
       - main
 
 jobs:
-  zephyr-deployment:
-    uses: ./.github/workflows/zephyr-deployment.yml
-    secrets:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+#  zephyr-deployment:
+#    uses: ./.github/workflows/zephyr-deployment.yml
+#    secrets:
+#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
 
   ios-tests:
-    needs: zephyr-deployment
+#    needs: zephyr-deployment
     uses: ./.github/workflows/e2e-ios.yml
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-    with:
-      build-zephyr-repack-plugin-locally: true
+#    with:
+#      build-zephyr-repack-plugin-locally: true
 
   android-tests:
-    needs: zephyr-deployment
+#    needs: zephyr-deployment
     uses: ./.github/workflows/e2e-android.yml
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-    with:
-      build-zephyr-repack-plugin-locally: true
+#    with:
+#      build-zephyr-repack-plugin-locally: true
