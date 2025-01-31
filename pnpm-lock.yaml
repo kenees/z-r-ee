@@ -22,6 +22,9 @@ patchedDependencies:
   react-native-paper:
     hash: uhcd3rpprscdp2okr45hgmmtse
     path: patches/react-native-paper.patch
+  webpack-bundle-analyzer:
+    hash: lljpnf6sfrcgcmof7d2otkftuq
+    path: patches/webpack-bundle-analyzer.patch
 
 importers:
 
@@ -10122,7 +10125,7 @@ snapshots:
       path-browserify: 1.0.1
       semver: 7.6.3
       source-map: 0.7.4
-      webpack-bundle-analyzer: 4.10.2
+      webpack-bundle-analyzer: 4.10.2(patch_hash=lljpnf6sfrcgcmof7d2otkftuq)
     transitivePeerDependencies:
       - '@rspack/core'
       - bufferutil
@@ -15859,7 +15862,7 @@ snapshots:
 
   webidl-conversions@3.0.1: {}
 
-  webpack-bundle-analyzer@4.10.2:
+  webpack-bundle-analyzer@4.10.2(patch_hash=lljpnf6sfrcgcmof7d2otkftuq):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       acorn: 8.14.0
