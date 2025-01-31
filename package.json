@@ -64,7 +64,8 @@
       "@react-native/community-cli-plugin": "patches/@react-native__community-cli-plugin.patch",
       "react-native-paper": "patches/react-native-paper.patch",
       "@callstack/repack": "patches/@callstack__repack.patch",
-      "react-native": "patches/react-native.patch"
+      "react-native": "patches/react-native.patch",
+      "webpack-bundle-analyzer": "patches/webpack-bundle-analyzer.patch"
     },
     "packageExtensions": {
       "@module-federation/data-prefetch": {

@@ -1,5 +1,6 @@
 import {createRequire} from 'node:module';
 import * as Repack from '@callstack/repack';
+import {RsdoctorRspackPlugin} from '@rsdoctor/rspack-plugin';
 import rspack from '@rspack/core';
 import {getSharedDependencies} from 'mobile-sdk';
 import path from 'node:path';
@@ -206,6 +207,13 @@ export default env => {
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,
       }),
+      // Only register the plugin when RSDOCTOR is true, as the plugin will increase the build time.
+      process.env.RSDOCTOR &&
+        new RsdoctorRspackPlugin({
+          supports: {
+            generateTileGraph: true,
+          },
+        }),
     ],
   };
 

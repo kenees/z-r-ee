@@ -46,7 +46,7 @@ importers:
         specifier: 20.2.0-beta.2
         version: 20.2.0-beta.2(@babel/traverse@7.26.5)(@types/node@22.10.7)(@zkochan/js-yaml@0.0.7)(eslint@8.57.1)(nx@20.2.0-beta.2)(ts-node@10.9.1(@types/node@22.10.7)(typescript@5.7.3))(typescript@5.7.3)
       eslint:
-        specifier: ~8.57.0
+        specifier: ~8.57.1
         version: 8.57.1
       husky:
         specifier: ^9.1.7
@@ -58,7 +58,7 @@ importers:
         specifier: 20.2.0-beta.2
         version: 20.2.0-beta.2
       prettier:
-        specifier: ^3.3.3
+        specifier: ^3.4.2
         version: 3.4.2
       zephyr-agent:
         specifier: 0.0.0-canary-20241122011536
@@ -79,8 +79,8 @@ importers:
         specifier: 6.11.0
         version: 6.11.0(ojgd4s7742timz554vc5nqgltq)
       lottie-react-native:
-        specifier: 7.2.2
-        version: 7.2.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
+        specifier: 7.1.0
+        version: 7.1.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       mobile-core:
         specifier: 0.0.1
         version: link:../../packages/mobile-core
@@ -131,8 +131,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.7)(ts-node@10.9.1(@types/node@22.10.7)(typescript@5.7.3)))(typescript@5.7.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.10
-        version: 5.0.0-rc.10(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
+        specifier: 5.0.0-rc.7
+        version: 5.0.0-rc.7(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.3(typescript@5.7.3)
@@ -146,7 +146,7 @@ importers:
         specifier: 0.76.1
         version: 0.76.1
       '@rnx-kit/align-deps':
-        specifier: ^2.5.1
+        specifier: ^2.5.5
         version: 2.5.5
       '@rspack/core':
         specifier: ^1.1.6
@@ -200,8 +200,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20250121175535
-        version: 0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1)
+        specifier: 0.0.0-canary-20241121202227
+        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
 
   apps/mobile-checkout:
     dependencies:
@@ -215,8 +215,8 @@ importers:
         specifier: 6.11.0
         version: 6.11.0(ojgd4s7742timz554vc5nqgltq)
       lottie-react-native:
-        specifier: 7.2.2
-        version: 7.2.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
+        specifier: 7.1.0
+        version: 7.1.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       mobile-core:
         specifier: 0.0.1
         version: link:../../packages/mobile-core
@@ -267,8 +267,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.7)(ts-node@10.9.1(@types/node@22.10.7)(typescript@5.7.3)))(typescript@5.7.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.10
-        version: 5.0.0-rc.10(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
+        specifier: 5.0.0-rc.7
+        version: 5.0.0-rc.7(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.3(typescript@5.7.3)
@@ -282,7 +282,7 @@ importers:
         specifier: 0.76.1
         version: 0.76.1
       '@rnx-kit/align-deps':
-        specifier: ^2.5.1
+        specifier: ^2.5.5
         version: 2.5.5
       '@rspack/core':
         specifier: ^1.1.6
@@ -336,8 +336,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20250121175535
-        version: 0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1)
+        specifier: 0.0.0-canary-20241121202227
+        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
 
   apps/mobile-e2e: {}
 
@@ -356,8 +356,8 @@ importers:
         specifier: 6.11.0
         version: 6.11.0(ojgd4s7742timz554vc5nqgltq)
       lottie-react-native:
-        specifier: 7.2.2
-        version: 7.2.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
+        specifier: 7.1.0
+        version: 7.1.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       mobile-core:
         specifier: 0.0.1
         version: link:../../packages/mobile-core
@@ -368,7 +368,7 @@ importers:
         specifier: 0.76.1
         version: 0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1)
       react-native-bootsplash:
-        specifier: ^6.3.1
+        specifier: ^6.3.2
         version: 6.3.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       react-native-config:
         specifier: 1.5.3
@@ -414,8 +414,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.7)(ts-node@10.9.1(@types/node@22.10.7)(typescript@5.7.3)))(typescript@5.7.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.10
-        version: 5.0.0-rc.10(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
+        specifier: 5.0.0-rc.7
+        version: 5.0.0-rc.7(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.3(typescript@5.7.3)
@@ -432,7 +432,7 @@ importers:
         specifier: 0.76.1
         version: 0.76.1
       '@rnx-kit/align-deps':
-        specifier: ^2.5.1
+        specifier: ^2.5.5
         version: 2.5.5
       '@rspack/core':
         specifier: ^1.1.6
@@ -483,7 +483,7 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       reactotron-react-native:
-        specifier: ^5.1.10
+        specifier: ^5.1.12
         version: 5.1.12(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))
       typescript:
         specifier: ^5.6.3
@@ -492,8 +492,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20250121175535
-        version: 0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1)
+        specifier: 0.0.0-canary-20241121202227
+        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
     dependenciesMeta:
       mobile-core:
         injected: true
@@ -510,8 +510,8 @@ importers:
         specifier: 6.11.0
         version: 6.11.0(ojgd4s7742timz554vc5nqgltq)
       lottie-react-native:
-        specifier: 7.2.2
-        version: 7.2.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
+        specifier: 7.1.0
+        version: 7.1.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       mobile-core:
         specifier: 0.0.1
         version: link:../../packages/mobile-core
@@ -562,8 +562,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.7)(ts-node@10.9.1(@types/node@22.10.7)(typescript@5.7.3)))(typescript@5.7.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.10
-        version: 5.0.0-rc.10(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
+        specifier: 5.0.0-rc.7
+        version: 5.0.0-rc.7(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.3(typescript@5.7.3)
@@ -577,7 +577,7 @@ importers:
         specifier: 0.76.1
         version: 0.76.1
       '@rnx-kit/align-deps':
-        specifier: ^2.5.1
+        specifier: ^2.5.5
         version: 2.5.5
       '@rspack/core':
         specifier: ^1.1.6
@@ -631,8 +631,8 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20250121175535
-        version: 0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1)
+        specifier: 0.0.0-canary-20241121202227
+        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
     dependenciesMeta:
       mobile-core:
         injected: true
@@ -649,8 +649,8 @@ importers:
         specifier: 6.11.0
         version: 6.11.0(ojgd4s7742timz554vc5nqgltq)
       lottie-react-native:
-        specifier: 7.2.2
-        version: 7.2.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
+        specifier: 7.1.0
+        version: 7.1.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       mobile-core:
         specifier: 0.0.1
         version: link:../../packages/mobile-core
@@ -701,8 +701,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(@types/eslint@9.6.1)(eslint@8.57.1)(jest@29.7.0(@types/node@22.10.7)(ts-node@10.9.1(@types/node@22.10.7)(typescript@5.7.3)))(typescript@5.7.3)
       '@callstack/repack':
-        specifier: 5.0.0-rc.10
-        version: 5.0.0-rc.10(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
+        specifier: 5.0.0-rc.7
+        version: 5.0.0-rc.7(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)
       '@react-native-community/cli':
         specifier: ^15.1.2
         version: 15.1.3(typescript@5.7.3)
@@ -716,7 +716,7 @@ importers:
         specifier: 0.76.1
         version: 0.76.1
       '@rnx-kit/align-deps':
-        specifier: ^2.5.1
+        specifier: ^2.5.5
         version: 2.5.5
       '@rspack/core':
         specifier: ^1.1.6
@@ -770,22 +770,22 @@ importers:
         specifier: ^5.95.0
         version: 5.97.1
       zephyr-repack-plugin:
-        specifier: 0.0.0-canary-20250121175535
-        version: 0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1)
+        specifier: 0.0.0-canary-20241121202227
+        version: 0.0.0-canary-20241121202227(encoding@0.1.13)
 
   packages/mobile-core:
     dependencies:
       '@tanstack/react-query':
-        specifier: ^5.59.16
+        specifier: ^5.64.2
         version: 5.64.2(react@18.3.1)
       axios:
-        specifier: ^1.7.7
+        specifier: ^1.7.9
         version: 1.7.9
       i18next:
         specifier: 24.0.2
         version: 24.0.2(typescript@5.7.3)
       react-hook-form:
-        specifier: ^7.53.2
+        specifier: ^7.54.2
         version: 7.54.2(react@18.3.1)
       react-i18next:
         specifier: 15.1.2
@@ -803,7 +803,7 @@ importers:
         specifier: 10.2.0
         version: 10.2.0
       zustand:
-        specifier: ^5.0.0
+        specifier: ^5.0.3
         version: 5.0.3(@types/react@18.3.18)(react@18.3.1)
     devDependencies:
       '@callstack/eslint-config':
@@ -819,19 +819,19 @@ importers:
         specifier: 0.5.13
         version: 0.5.13
       '@types/jest':
-        specifier: ^29.5.5
+        specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.10.1
+        specifier: ^22.10.7
         version: 22.10.7
       '@types/react':
-        specifier: ^18.2.44
+        specifier: ^18.3.18
         version: 18.3.18
       '@types/react-native-vector-icons':
-        specifier: ^6.4.12
+        specifier: ^6.4.18
         version: 6.4.18
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-plugin-barrel-files:
         specifier: ^2.1.0
@@ -858,7 +858,7 @@ importers:
         specifier: 5.12.5
         version: 5.12.5(patch_hash=uhcd3rpprscdp2okr45hgmmtse)(react-native-safe-area-context@4.12.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1))(react-native-vector-icons@10.2.0)(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1)
       typescript:
-        specifier: ^5.6.3
+        specifier: ^5.7.3
         version: 5.7.3
 
   packages/mobile-eslint-config: {}
@@ -1585,8 +1585,8 @@ packages:
     peerDependencies:
       react: '>=16.3.0'
 
-  '@callstack/repack-dev-server@5.0.0-rc.10':
-    resolution: {integrity: sha512-wRAdsGYb531xeJlgKxrRmSdQvfmwt/eaSz6lJwEV3TBIW4McLNcR15jCTG3HXeg4OFjFhezksbXUtsHryUWS+A==}
+  '@callstack/repack-dev-server@5.0.0-rc.7':
+    resolution: {integrity: sha512-fTZ0QvnrKx36dXC7AiteIOfR/XQ+KD0veiWe1M0qHfl3HFrD9cU5S0t0uSDieXP7YM90+CWCjJohpvz9PTcTFg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@react-native-community/cli-server-api': '>=13.6.4'
@@ -1594,8 +1594,8 @@ packages:
       '@react-native-community/cli-server-api':
         optional: true
 
-  '@callstack/repack@5.0.0-rc.10':
-    resolution: {integrity: sha512-B+9pcWVrPRD+foy9X8rk3cpXSk3tY4qT9ZkvUNKeN74bQp3qZI6kL5gd83dmkemsIHaNKopleP8R/3Q/YqGKgg==}
+  '@callstack/repack@5.0.0-rc.7':
+    resolution: {integrity: sha512-ntRqP9I4ZB6wCHlr8EXGf2fiZEcYGoPhIVbb7nDrIMLJxRB7SfeVkdojDpf+nYcg5mvhoL5xANVPmzUrmHRZdw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@module-federation/enhanced': '>=0.6.10'
@@ -2489,8 +2489,6 @@ packages:
   '@react-native/metro-babel-transformer@0.76.1':
     resolution: {integrity: sha512-LUAKqgsrioXS2a+pE0jak8sutTbLo3T34KWv7mdVUZ5lUACpqkIql1EFtIQlWjIcR4oZE480CkPbRHBI681tkQ==}
     engines: {node: '>=18'}
-    peerDependencies:
-      '@babel/core': '*'
 
   '@react-native/normalize-colors@0.76.1':
     resolution: {integrity: sha512-/+CUk/wGWIdXbJYVLw/q6Fs8Z0x91zzfXIbNiZUdSW1TNEDmytkF371H8a1/Nx3nWa1RqCMVsaZHCG4zqxeDvg==}
@@ -4128,7 +4126,6 @@ packages:
     resolution: {integrity: sha512-NXeHXtFLZd6QGbS5af9tiwIoI+BVptHUcGkkF/ouvEPa+ZiZvK0xek4Yh6cd5jNDEg8P+tIA5xxB2ZC/RnqXyw==}
     peerDependencies:
       eslint: '>= 5'
-    bundledDependencies: []
 
   eslint-plugin-eslint-comments@3.2.0:
     resolution: {integrity: sha512-0jkOl0hfojIHHmEHgmNdqv4fmh7300NdpA9FFpF7zaoLvB/QeXOGNLIo86oAveJFrfB1p05kC8hpEMHM8DwWVQ==}
@@ -4291,9 +4288,6 @@ packages:
   estraverse@5.3.0:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
-
-  estree-util-is-identifier-name@1.1.0:
-    resolution: {integrity: sha512-OVJZ3fGGt9By77Ix9NhaRbzfbDV/2rx9EP7YIDJTmsZSEc5kYn2vWcNccYyahJL2uAQZK2a5Or2i0wtIKTPoRQ==}
 
   estree-walker@0.6.1:
     resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
@@ -5487,8 +5481,8 @@ packages:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
-  lottie-react-native@7.2.2:
-    resolution: {integrity: sha512-pp3dnFVFZlfZzIL5qKGXju2d6RfnYhPbb8xQL9dYqvPbPy2EbnK2aFlv6jAZLYh0QjUGPEmRAgAAnsOOtT+H9Q==}
+  lottie-react-native@7.1.0:
+    resolution: {integrity: sha512-73jtQySxRZ8KTTSKf6CtcpCt8tpOCw4NRiCST4HTYgXlycxIihIp89jRcK8rS/QiBKl5bzyixMzpVmd4mYVH5Q==}
     peerDependencies:
       '@lottiefiles/dotlottie-react': ^0.6.5
       react: '*'
@@ -7475,14 +7469,17 @@ packages:
   youch@3.3.4:
     resolution: {integrity: sha512-UeVBXie8cA35DS6+nBkls68xaBBXCye0CNznrhszZjTbRVnJKQuNsyLKBTTL4ln1o1rh2PKtv35twV7irj5SEg==}
 
+  zephyr-agent@0.0.0-canary-20241121193105:
+    resolution: {integrity: sha512-f9rcKG7LemgZRmP14O3ck5xd3RDsQmByh5c6IgkryK9f+pZzGPtlbddAaTLJh7Ho9EdY9FbfeuepAFDMTh/DyQ==}
+
   zephyr-agent@0.0.0-canary-20241122011536:
     resolution: {integrity: sha512-F0zxqRFqkHgIH4T1BFDUR/4H+9E3XpRewNO3j5L8EVNsi39Lq4c6NfykWkop3vvBSEdkpC02hEeoe5zz0ygnCg==}
 
   zephyr-agent@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-2O8BYLaxsSzZh0Ry6wenUzkOMhpyqrYAwzZLpkFlvBEUkSk4V9Ay0LZCo8DZ6+az+i5fGBF5iew0bbyNWMHBGQ==}
 
-  zephyr-agent@0.0.0-canary-20250121175535:
-    resolution: {integrity: sha512-a62sooWvyKyRHgmB9P0Jr7NTCwmE9mx5N/+cf3vfxzBcmkN+xRc9+Pb9t58MtNBZHR2oG58j0ApckUrV+5vXfA==}
+  zephyr-edge-contract@0.0.0-canary-20241121193105:
+    resolution: {integrity: sha512-BT1HLxnbP0lY/ezpRBZWELiUnU1iv3FI4v1T2jHd7yNs01b4WZ5m+ZY5g1hGo81wC4K9MIt9vhJexR8MTVXHZA==}
 
   zephyr-edge-contract@0.0.0-canary-20241122011536:
     resolution: {integrity: sha512-syoNnvSK3oOJjvyPE5YrO7x1PRpTEG2xHmA47S/MbuQcrnE/gUNrL0hiwGG1+I32SsIj7zWgirjPw8XVmGaD0g==}
@@ -7490,20 +7487,14 @@ packages:
   zephyr-edge-contract@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-tFkhBh1ISSFp5q3yQcKG1Bqi5jOEr2MifxLB0E2AdsG0SsUooSHwKYBNNyJIgsRa3v2xvthBV2OVcA/QX5ha7w==}
 
-  zephyr-edge-contract@0.0.0-canary-20250121175535:
-    resolution: {integrity: sha512-/wAvUH9VKaM6TR+1xMvkW3OCWWSd6v2xcVGggRSpp43nAudatZFiGchOEaFVxrIOWv+iQnVldH2Ic8IBVMdCcA==}
-
-  zephyr-repack-plugin@0.0.0-canary-20250121175535:
-    resolution: {integrity: sha512-pAh3MVCol23EwcqVotVIQea0MdwxhxkuPPjXe0DwL6YO1oYB/RIXbF5d/wR4xTUaRMBhv4W/3ZBxbGxtV8Cgqg==}
+  zephyr-repack-plugin@0.0.0-canary-20241121202227:
+    resolution: {integrity: sha512-aXsUxRcakQIx6eflVW7P0GbCTL9lSHA51LMxBYpvESfQNtx03D13WKo/CKLU1ZZpuV2U9sihYId1X3KdHJKSAw==}
 
   zephyr-rspack-plugin@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-enrneMuU6ccxdmHPwctRE03G2OimR5jtDtOaRnVHRAcQdzre9dEBuIPFi8aT9xmcbHJz3AEVY7gNJrQXHcsrRw==}
 
   zephyr-xpack-internal@0.0.0-canary-20241122175815:
     resolution: {integrity: sha512-aH3mvSnjXpNtdCHNmJN5Zmv1J4+4qJ7Uv9d+T8JhqZNCVC5OsI9w0g0MIymRfaJnHcdWjjZCryIynaDLWqnxaA==}
-
-  zephyr-xpack-internal@0.0.0-canary-20250121175535:
-    resolution: {integrity: sha512-5EEz2quXNmntxrXBPlQYVWBurqhbwU6f2NRwlxm+1OHx2F2aZH6a7BeQ640m9+1amFVuM5SnBYkTVn7Syo4A4w==}
 
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
@@ -8450,7 +8441,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 18.3.1
 
-  '@callstack/repack-dev-server@5.0.0-rc.10(@react-native-community/cli-server-api@15.1.3)':
+  '@callstack/repack-dev-server@5.0.0-rc.7(@react-native-community/cli-server-api@15.1.3)':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@fastify/middie': 8.3.3
@@ -8469,9 +8460,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@callstack/repack@5.0.0-rc.10(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)':
+  '@callstack/repack@5.0.0-rc.7(patch_hash=kik27ufqq53uhf52kg2o542fkm)(@babel/core@7.26.0)(@module-federation/enhanced@0.6.13(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@react-native-community/cli-server-api@15.1.3)(@react-native-community/cli-types@15.1.3)(@react-native-community/cli@15.1.3(typescript@5.7.3))(@rspack/core@1.1.8(@swc/helpers@0.5.15))(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(webpack@5.97.1)':
     dependencies:
-      '@callstack/repack-dev-server': 5.0.0-rc.10(@react-native-community/cli-server-api@15.1.3)
+      '@callstack/repack-dev-server': 5.0.0-rc.7(@react-native-community/cli-server-api@15.1.3)
       '@discoveryjs/json-ext': 0.5.7
       '@react-native-community/cli': 15.1.3(typescript@5.7.3)
       '@react-native-community/cli-types': 15.1.3
@@ -8479,7 +8470,6 @@ snapshots:
       babel-loader: 9.2.1(@babel/core@7.26.0)(webpack@5.97.1)
       colorette: 2.0.20
       dedent: 0.7.0
-      estree-util-is-identifier-name: 1.1.0
       events: 3.3.0
       execa: 5.1.1
       flow-remove-types: 2.259.1
@@ -9787,10 +9777,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@react-native/community-cli-plugin@0.76.1(patch_hash=gdpi5rwh3blcwxgyspzwxjdb6a)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(encoding@0.1.13)':
+  '@react-native/community-cli-plugin@0.76.1(patch_hash=gdpi5rwh3blcwxgyspzwxjdb6a)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(encoding@0.1.13)':
     dependencies:
       '@react-native/dev-middleware': 0.76.1
-      '@react-native/metro-babel-transformer': 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
+      '@react-native/metro-babel-transformer': 0.76.1(@babel/preset-env@7.26.0(@babel/core@7.26.0))
       chalk: 4.1.2
       execa: 5.1.1
       invariant: 2.2.4
@@ -9802,7 +9792,6 @@ snapshots:
     optionalDependencies:
       '@react-native-community/cli-server-api': 15.1.3
     transitivePeerDependencies:
-      - '@babel/core'
       - '@babel/preset-env'
       - bufferutil
       - encoding
@@ -9859,7 +9848,7 @@ snapshots:
 
   '@react-native/js-polyfills@0.76.1': {}
 
-  '@react-native/metro-babel-transformer@0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))':
+  '@react-native/metro-babel-transformer@0.76.1(@babel/preset-env@7.26.0(@babel/core@7.26.0))':
     dependencies:
       '@babel/core': 7.26.0
       '@react-native/babel-preset': 0.76.1(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))
@@ -10094,7 +10083,7 @@ snapshots:
 
   '@types/node-fetch@2.6.12':
     dependencies:
-      '@types/node': 22.10.7
+      '@types/node': 18.19.71
       form-data: 4.0.1
 
   '@types/node-forge@1.3.11':
@@ -11914,8 +11903,6 @@ snapshots:
 
   estraverse@5.3.0: {}
 
-  estree-util-is-identifier-name@1.1.0: {}
-
   estree-walker@0.6.1:
     optional: true
 
@@ -13374,7 +13361,7 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
-  lottie-react-native@7.2.2(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1):
+  lottie-react-native@7.1.0(react-native@0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-native: 0.76.1(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(encoding@0.1.13)(react@18.3.1)
@@ -14380,7 +14367,7 @@ snapshots:
       '@jest/create-cache-key-function': 29.7.0
       '@react-native/assets-registry': 0.76.1
       '@react-native/codegen': 0.76.1(@babel/preset-env@7.26.0(@babel/core@7.26.0))
-      '@react-native/community-cli-plugin': 0.76.1(patch_hash=gdpi5rwh3blcwxgyspzwxjdb6a)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(encoding@0.1.13)
+      '@react-native/community-cli-plugin': 0.76.1(patch_hash=gdpi5rwh3blcwxgyspzwxjdb6a)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(encoding@0.1.13)
       '@react-native/gradle-plugin': 0.76.1
       '@react-native/js-polyfills': 0.76.1
       '@react-native/normalize-colors': 0.76.1
@@ -15669,6 +15656,26 @@ snapshots:
       stacktracey: 2.1.8
     optional: true
 
+  zephyr-agent@0.0.0-canary-20241121193105(encoding@0.1.13):
+    dependencies:
+      cloudflare: 3.5.0(encoding@0.1.13)
+      git-url-parse: 15.0.0
+      is-ci: 3.0.1
+      jose: 5.9.6
+      open: 10.1.0
+      socket.io-client: 4.8.1
+      tslib: 2.8.1
+      uuid: 8.3.2
+      zephyr-edge-contract: 0.0.0-canary-20241121193105
+    optionalDependencies:
+      wrangler: 3.103.2
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
   zephyr-agent@0.0.0-canary-20241122011536(encoding@0.1.13):
     dependencies:
       cloudflare: 3.5.0(encoding@0.1.13)
@@ -15711,27 +15718,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  zephyr-agent@0.0.0-canary-20250121175535(encoding@0.1.13):
+  zephyr-edge-contract@0.0.0-canary-20241121193105:
     dependencies:
-      cloudflare: 3.5.0(encoding@0.1.13)
       debug: 4.4.0
-      git-url-parse: 15.0.0
-      is-ci: 3.0.1
-      jose: 5.9.6
       node-persist: 4.0.4
-      open: 10.1.0
-      socket.io-client: 4.8.1
       tslib: 2.8.1
-      uuid: 8.3.2
-      zephyr-edge-contract: 0.0.0-canary-20250121175535
-    optionalDependencies:
-      wrangler: 3.103.2
     transitivePeerDependencies:
-      - '@cloudflare/workers-types'
-      - bufferutil
-      - encoding
       - supports-color
-      - utf-8-validate
 
   zephyr-edge-contract@0.0.0-canary-20241122011536:
     dependencies:
@@ -15741,21 +15734,16 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  zephyr-edge-contract@0.0.0-canary-20250121175535:
+  zephyr-repack-plugin@0.0.0-canary-20241121202227(encoding@0.1.13):
     dependencies:
-      tslib: 2.8.1
-
-  zephyr-repack-plugin@0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1):
-    dependencies:
-      zephyr-agent: 0.0.0-canary-20250121175535(encoding@0.1.13)
-      zephyr-xpack-internal: 0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1)
+      zephyr-agent: 0.0.0-canary-20241121193105(encoding@0.1.13)
+      zephyr-edge-contract: 0.0.0-canary-20241121193105
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - bufferutil
       - encoding
       - supports-color
       - utf-8-validate
-      - webpack
 
   zephyr-rspack-plugin@0.0.0-canary-20241122175815(@swc/helpers@0.5.15)(webpack@5.97.1):
     dependencies:
@@ -15795,21 +15783,6 @@ snapshots:
       - uglify-js
       - utf-8-validate
       - webpack-cli
-
-  zephyr-xpack-internal@0.0.0-canary-20250121175535(encoding@0.1.13)(webpack@5.97.1):
-    dependencies:
-      '@module-federation/automatic-vendor-federation': 1.2.1(webpack@5.97.1)
-      is-ci: 3.0.1
-      tslib: 2.8.1
-      zephyr-agent: 0.0.0-canary-20250121175535(encoding@0.1.13)
-      zephyr-edge-contract: 0.0.0-canary-20250121175535
-    transitivePeerDependencies:
-      - '@cloudflare/workers-types'
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
-      - webpack
 
   zod@3.24.1:
     optional: true
