@@ -9,10 +9,10 @@ on:
       - main
 
 jobs:
-#  zephyr-deployment:
-#    uses: ./.github/workflows/zephyr-deployment.yml
-#    secrets:
-#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+  zephyr-deployment:
+    uses: ./.github/workflows/zephyr-deployment.yml
+    secrets:
+      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
 
   ios-tests:
 #    needs: zephyr-deployment
