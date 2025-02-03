@@ -27,4 +27,4 @@ jobs:
                   echo "Error: ZE_SECRET_TOKEN is not set"
                   exit 1
                 fi
-                pnpm nx run-many -t bundle:ios bundle:android
+                pnpm nx run-many -t bundle:${{ inputs.platform }}
