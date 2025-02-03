@@ -23,6 +23,7 @@ jobs:
       build-zephyr-repack-plugin-locally: true
 
   ios-tests:
+    if: always()
     needs: android-tests
     uses: ./.github/workflows/e2e-ios.yml
     secrets:
