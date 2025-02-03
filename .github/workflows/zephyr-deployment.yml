@@ -6,6 +6,11 @@ on:
       ZE_SECRET_TOKEN:
         required: true
         description: "Zephyr secret token"
+    inputs:
+      platform:
+        required: false
+        type: string
+        default: ios
 
 jobs:
     zephyr-deployment:
