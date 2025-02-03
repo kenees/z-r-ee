@@ -25,6 +25,8 @@ jobs:
       build-zephyr-repack-plugin-locally: true
 
   zephyr-deployment-ios:
+    if: always()
+    needs: android-tests
     uses: ./.github/workflows/zephyr-deployment.yml
     with:
       platform: ios
@@ -33,7 +35,7 @@ jobs:
 
   ios-tests:
     if: always()
-    needs: [android-tests, zephyr-deployment-ios]
+    needs: zephyr-deployment-ios
     uses: ./.github/workflows/e2e-ios.yml
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
