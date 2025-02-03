@@ -58,10 +58,9 @@
   },
   "pnpm": {
     "overrides": {
-      "@react-native/dev-middleware": "0.76.1"
+      "@react-native/dev-middleware": "0.76.6"
     },
     "patchedDependencies": {
-      "@react-native/community-cli-plugin": "patches/@react-native__community-cli-plugin.patch",
       "react-native-paper": "patches/react-native-paper.patch",
       "react-native": "patches/react-native.patch"
     },
