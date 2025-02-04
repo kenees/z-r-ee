@@ -1,12 +1,9 @@
 name: Zephyr Repack Plugin E2E testing
-#on:
-#  repository_dispatch:
-#    types: [trigger-from-zephyr-packages]
 
 on:
-  pull_request:
-    branches:
-      - main
+  repository_dispatch:
+    types: [trigger-from-zephyr-packages]
+
 
 jobs:
   zephyr-deployment-ios:
