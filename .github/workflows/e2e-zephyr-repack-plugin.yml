@@ -9,37 +9,27 @@ on:
       - main
 
 jobs:
-#  zephyr-deployment-android:
-#    uses: ./.github/workflows/zephyr-deployment.yml
-#    with:
-#      platform: android
-#    secrets:
-#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-
-  android-tests:
-#    needs: zephyr-deployment-android
-    uses: ./.github/workflows/e2e-android.yml
-    secrets:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-    with:
-      build-zephyr-repack-plugin-locally: true
-
-#  zephyr-deployment-ios:
-#    if: always()
-#    needs: android-tests
-#    uses: ./.github/workflows/zephyr-deployment.yml
-#    with:
-#      platform: ios
-#    secrets:
-#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-
   ios-tests:
-    if: always()
-    needs: android-tests
     uses: ./.github/workflows/e2e-ios.yml
     secrets:
       ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
     with:
       build-zephyr-repack-plugin-locally: true
 
+  zephyr-deployment-android:
+    if: always()
+    needs: ios-tests
+    uses: ./.github/workflows/zephyr-deployment.yml
+    with:
+      platform: android
+    secrets:
+      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+
+  android-tests:
+    needs: zephyr-deployment-android
+    uses: ./.github/workflows/e2e-android.yml
+    secrets:
+      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+    with:
+      build-zephyr-repack-plugin-locally: true
 
