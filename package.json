@@ -57,13 +57,9 @@
     "zephyr-rspack-plugin": "0.0.0-canary-20241122175815"
   },
   "pnpm": {
-    "overrides": {
-      "@react-native/dev-middleware": "0.76.1"
-    },
     "patchedDependencies": {
       "@react-native/community-cli-plugin": "patches/@react-native__community-cli-plugin.patch",
       "react-native-paper": "patches/react-native-paper.patch",
-      "@callstack/repack": "patches/@callstack__repack.patch",
       "react-native": "patches/react-native.patch",
       "webpack-bundle-analyzer": "patches/webpack-bundle-analyzer.patch"
     },
