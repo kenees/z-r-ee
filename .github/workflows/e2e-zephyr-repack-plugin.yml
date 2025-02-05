@@ -19,6 +19,24 @@ jobs:
             exit 1
           fi
 
+      - name: Trigger Results Workflow in `zephyr-packages` repo
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'MikitasK',
+              repo: 'zephyr-packages',
+              workflow_id: 'zephyr_repack_plugin_e2e_results.yml',
+              ref: 'ci/zephyr-repack-plugin-e2e-trigger',
+              inputs: {
+                workflow_status: "${{ job.status }}",
+                commit_sha: "${{ github.sha }}",
+                run_url: "https://github.com/ZephyrCloudIO/zephyr-repack-example/actions/runs/${{ github.run_id }}"
+              }
+            });    
+
 #  zephyr-deployment-ios:
 #    uses: ./.github/workflows/zephyr-deployment.yml
 #    with:
@@ -51,4 +69,5 @@ jobs:
 #      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
 #    with:
 #      build-zephyr-repack-plugin-locally: true
+
 
