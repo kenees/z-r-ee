@@ -40,6 +40,14 @@ jobs:
       - name: Setup JS Environment and Dependencies
         uses: ./.github/actions/setup-dependencies
 
+      - name: Cache Pods
+        uses: actions/cache@v3
+        with:
+          path: apps/mobile-host/ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('apps/mobile-host/ios/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-  
+
       - name: Build Zephyr Repack Plugin locally
         if: ${{ inputs.build-zephyr-repack-plugin-locally }}
         uses: ./.github/actions/build-zephyr-repack-plugin
@@ -47,7 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Pods
-        run: pnpm pods
+        run: pnpm --filter MobileHost pods
 
       - name: Run iOS E2E Tests on Release Mode
         env:
