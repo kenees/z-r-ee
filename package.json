@@ -57,9 +57,6 @@
     "zephyr-rspack-plugin": "0.0.0-canary-20241122175815"
   },
   "pnpm": {
-    "overrides": {
-      "@react-native/dev-middleware": "0.76.6"
-    },
     "patchedDependencies": {
       "react-native-paper": "patches/react-native-paper.patch",
       "react-native": "patches/react-native.patch",
