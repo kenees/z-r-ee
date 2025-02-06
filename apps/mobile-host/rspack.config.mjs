@@ -1,5 +1,6 @@
 import {createRequire} from 'node:module';
 import * as Repack from '@callstack/repack';
+import {RsdoctorRspackPlugin} from '@rsdoctor/rspack-plugin';
 import rspack from '@rspack/core';
 import {getSharedDependencies} from 'mobile-sdk';
 import path from 'node:path';
@@ -208,6 +209,16 @@ export default env => {
       }),
     ],
   };
+
+  if (process.env.RSDOCTOR) {
+    config.plugins.push(
+      new RsdoctorRspackPlugin({
+        supports: {
+          generateTileGraph: true,
+        },
+      }),
+    );
+  }
 
   if (USE_ZEPHYR) {
     return withZephyr()(config);
