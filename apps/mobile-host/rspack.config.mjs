@@ -211,15 +211,18 @@ export default env => {
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,
       }),
-      // Only register the plugin when RSDOCTOR is true, as the plugin will increase the build time.
-      process.env.RSDOCTOR &&
-        new RsdoctorRspackPlugin({
-          supports: {
-            generateTileGraph: true,
-          },
-        }),
     ],
   };
+
+  if (process.env.RSDOCTOR) {
+    config.plugins.push(
+      new RsdoctorRspackPlugin({
+        supports: {
+          generateTileGraph: true,
+        },
+      }),
+    );
+  }
 
   if (USE_ZEPHYR) {
     return withZephyr()(config);
