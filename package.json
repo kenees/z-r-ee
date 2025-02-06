@@ -48,11 +48,11 @@
     "@nx/eslint-plugin": "20.2.0-beta.2",
     "@nx/jest": "20.2.0-beta.2",
     "@nx/plugin": "20.2.0-beta.2",
-    "eslint": "~8.57.0",
+    "eslint": "~8.57.1",
     "husky": "^9.1.7",
     "mprocs": "^0.7.1",
     "nx": "20.2.0-beta.2",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "zephyr-agent": "0.0.0-canary-20241122011536",
     "zephyr-rspack-plugin": "0.0.0-canary-20241122175815"
   },
