@@ -14,14 +14,11 @@ runs:
         git submodule update --init --recursive
       shell: bash
 
-    # Ensures a consistent pnpm version being used across all actions
-    # Uses the version specified in the project's package.json file under the key: packageManager
     - uses: pnpm/action-setup@v4
       name: Install pnpm
       with:
         run_install: false
 
-    # Ensures a consistent node version being used across all actions
     - uses: actions/setup-node@v4
       name: Install Node.js
       with:
