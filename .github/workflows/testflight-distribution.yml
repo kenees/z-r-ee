@@ -27,6 +27,7 @@ jobs:
         run: pnpm --filter MobileHost pods
 
       - name: Run fastlane TestFlight distribution lane
+        working-directory: 'apps/mobile-host/ios'
         env:
           APP_IDENTIFIER: ${{ secrets.APP_IDENTIFIER }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
