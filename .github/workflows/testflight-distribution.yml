@@ -1,0 +1,30 @@
+name: Testflight Distribution
+on: 
+  push:
+    branches: 
+      - 'main'
+      - 'feat/testflight'
+jobs:
+  build-and-distribute-to-testflight:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      
+      - name: Setup Node  
+        uses: actions/setup-node@v4
+        with:
+            node-version: 22
+
+      - name: Setup PNPM 
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
+
+      - name: Install pods
+        run: pnpm --filter MobileHost pods
+      
+
+
