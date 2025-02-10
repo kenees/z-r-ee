@@ -37,6 +37,11 @@ platform :ios do
       readonly: true
     )
 
+    increment_build_number(
+      xcodeproj: "host.xcodeproj",
+      build_number: ENV["BUILD_NUMBER"],
+    )
+
     gym(
       workspace: "host.xcworkspace",
       scheme: "host",
