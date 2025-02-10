@@ -30,7 +30,7 @@ platform :ios do
     )
 
     match(
-      type: "adhoc",
+      type: "appstore",
       api_key: api_key,
       app_identifier: ENV['APP_IDENTIFIER'],
       force_for_new_devices: true,
@@ -41,7 +41,7 @@ platform :ios do
       workspace: "host.xcworkspace",
       scheme: "host",
       configuration: "Release",
-      export_method: "ad-hoc",
+      export_method: "ad-store",
     )
 
     pilot(
