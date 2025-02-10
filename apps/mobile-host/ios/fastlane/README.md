@@ -15,18 +15,10 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios custom_lane
+### ios testflight_distribution
 
 ```sh
-[bundle exec] fastlane ios custom_lane
-```
-
-Description of what the lane does
-
-### ios tf_dist
-
-```sh
-[bundle exec] fastlane ios tf_dist
+[bundle exec] fastlane testflight_distribution
 ```
 
 Builds and uploads the app to TestFlight
