@@ -41,7 +41,7 @@ platform :ios do
       workspace: "host.xcworkspace",
       scheme: "host",
       configuration: "Release",
-      export_method: "ad-store",
+      export_method: "app-store",
     )
 
     pilot(
