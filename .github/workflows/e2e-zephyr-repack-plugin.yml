@@ -85,7 +85,7 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             await github.rest.actions.createWorkflowDispatch({
-              owner: 'ZephyrCloudIO',
+              owner: 'MikitasK',
               repo: 'zephyr-packages',
               workflow_id: 'zephyr_repack_plugin_e2e_results.yml',
               ref: 'ci/zephyr-repack-plugin-e2e-trigger',
