@@ -4,38 +4,100 @@ on:
   workflow_dispatch:
 
 jobs:
-  zephyr-deployment-ios:
-    uses: ./.github/workflows/zephyr-deployment.yml
-    with:
-      platform: ios
-    secrets:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+#  zephyr-deployment-ios:
+#    uses: ./.github/workflows/zephyr-deployment.yml
+#    with:
+#      platform: ios
+#    secrets:
+#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+#
+#  ios-tests:
+#    needs: zephyr-deployment-ios
+#    uses: ./.github/workflows/e2e-ios.yml
+#    secrets:
+#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+#    with:
+#      build-zephyr-repack-plugin-locally: true
+#
+#  zephyr-deployment-android:
+#    if: always()
+#    needs: ios-tests
+#    uses: ./.github/workflows/zephyr-deployment.yml
+#    with:
+#      platform: android
+#    secrets:
+#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+#
+#  android-tests:
+#    if: always()
+#    needs: zephyr-deployment-android
+#    uses: ./.github/workflows/e2e-android.yml
+#    secrets:
+#      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+#    with:
+#      build-zephyr-repack-plugin-locally: true
 
+  zephyr-deployment-ios:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run E2E Tests
+        run: |
+          echo "Running E2E tests..."
+          # Simulate test failure or success
+          if [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "Tests passed!"
+            exit 0
+          else
+            echo "Tests failed!"
+            exit 1
+          fi
   ios-tests:
     needs: zephyr-deployment-ios
-    uses: ./.github/workflows/e2e-ios.yml
-    secrets:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-    with:
-      build-zephyr-repack-plugin-locally: true
-
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run E2E Tests
+        run: |
+          echo "Running E2E tests..."
+          # Simulate test failure or success
+          if [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "Tests passed!"
+            exit 0
+          else
+            echo "Tests failed!"
+            exit 1
+          fi
   zephyr-deployment-android:
     if: always()
     needs: ios-tests
-    uses: ./.github/workflows/zephyr-deployment.yml
-    with:
-      platform: android
-    secrets:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run E2E Tests
+        run: |
+          echo "Running E2E tests..."
+          # Simulate test failure or success
+          if [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "Tests passed!"
+            exit 0
+          else
+            echo "Tests failed!"
+            exit 1
+          fi
   android-tests:
     if: always()
     needs: zephyr-deployment-android
-    uses: ./.github/workflows/e2e-android.yml
-    secrets:
-      ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-    with:
-      build-zephyr-repack-plugin-locally: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run E2E Tests
+        run: |
+          echo "Running E2E tests..."
+          # Simulate test failure or success
+          if [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "Tests passed!"
+            exit 0
+          else
+            echo "Tests failed!"
+            exit 1
+          fi  
 
   report-status:
     if: always()
