@@ -5,7 +5,7 @@
   },
   "react-native": {
     "name": "react-native",
-    "version": "0.76.1"
+    "version": "0.76.6"
   },
   "@react-navigation/native": {
     "name": "@react-navigation/native",
@@ -33,7 +33,7 @@
   },
   "@module-federation/enhanced": {
     "name": "@module-federation/enhanced",
-    "version": "0.8.9"
+    "version": "0.6.13"
   },
   "react-native-mmkv": {
     "name": "react-native-mmkv",
@@ -49,7 +49,7 @@
   },
   "lottie-react-native": {
     "name": "lottie-react-native",
-    "version": "7.1.0"
+    "version": "7.2.2"
   },
   "react-native-config": {
     "name": "react-native-config",

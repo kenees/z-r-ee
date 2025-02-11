@@ -19,12 +19,13 @@ echo "🚀 Starting iOS Maestro tests..."
 
 # Start the mobile servers in the background
 echo "🔧 Starting mobile servers..."
-pnpm run start:mobile:concurrently & # runs in background
+pnpm install -g concurrently
+ZC="$ZC" ZE_SECRET_TOKEN="$ZE_SECRET_TOKEN" pnpm run start:mobile:concurrently & # runs in background
 echo "✅ Mobile servers started successfully."
 
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
-pnpm run:mobile-host:ios --simulator="$SIMULATOR_NAME"
+pnpm run:mobile-host:ios --simulator="$SIMULATOR_NAME" --mode="$MODE"
 echo "✅ App built and installed successfully."
 
 # Run the end-to-end test scripts

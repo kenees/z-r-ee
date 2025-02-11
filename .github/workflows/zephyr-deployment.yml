@@ -1,22 +1,19 @@
 name: Zephyr Deployment
 
-# If the PR is closed and the Pr was targeting main
 on:
-    pull_request:
-      types: [closed]
-      branches:
-        - main
-
-# Needed for nx-set-shas when run on the main branch
-permissions:
-    actions: read
-    pull-requests: write
-    contents: read
+  workflow_call:
+    secrets:
+      ZE_SECRET_TOKEN:
+        required: true
+        description: "Zephyr secret token"
+    inputs:
+      platform:
+        required: false
+        type: string
+        default: ios
 
 jobs:
     zephyr-deployment:
-        # If the PR was actually merged into main
-        if: github.event.pull_request.merged == true
         runs-on: ubuntu-latest
         timeout-minutes: 10 # Set a timeout for the job to prevent it from running indefinitely
         steps:
@@ -24,6 +21,15 @@ jobs:
               with:
                 fetch-depth: 0
             - uses: ./.github/actions/setup-dependencies
-            - uses: ./.github/actions/zephyr-deployment
-              with:
-                auth_token: ${{ secrets.ZEPHYR_USER_AUTH_TOKEN }}
+            - name: Deploy to Zephyr
+              shell: bash
+              env:
+                  ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+                  WITH_ZE: "1"
+                  ZC: "1"
+              run: |
+                if [ -z "$ZE_SECRET_TOKEN" ]; then
+                  echo "Error: ZE_SECRET_TOKEN is not set"
+                  exit 1
+                fi
+                pnpm nx run-many -t bundle:${{ inputs.platform }}

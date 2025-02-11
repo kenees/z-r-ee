@@ -1,9 +1,20 @@
 name: E2E Android Tests
 
-on: [workflow_call]
+on:
+  workflow_call:
+    secrets:
+      ZE_SECRET_TOKEN:
+        required: true
+        description: "Zephyr secret token"
+    inputs:
+      build-zephyr-repack-plugin-locally:
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   android-e2e-tests:
+    timeout-minutes: 30 # Set a timeout for the job to prevent it from running indefinitely
     runs-on: ubuntu-latest
     env:
       MAESTRO_VERSION: 1.39.4
@@ -54,8 +65,18 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: echo "Generated AVD snapshot for caching."
 
-      - name: Run Android E2E Tests
+      - name: Build Zephyr Repack Plugin locally
+        if: ${{ inputs.build-zephyr-repack-plugin-locally }}
+        uses: ./.github/actions/build-zephyr-repack-plugin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Android E2E Tests on Release Mode
         uses: reactivecircus/android-emulator-runner@v2
+        env:
+          ZC: 1
+          ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
+          MODE: 'release'
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
@@ -65,6 +86,7 @@ jobs:
           script: |
             chmod +x ./.github/scripts/run-android-maestro-tests.sh
             ./.github/scripts/run-android-maestro-tests.sh
+
       - name: Upload Maestro Logs on Failure
         if: failure() # Runs only if any of the previous steps fail
         uses: actions/upload-artifact@v4

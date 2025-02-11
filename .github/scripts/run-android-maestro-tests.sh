@@ -19,7 +19,8 @@ echo "🚀 Starting Android Maestro tests..."
 
 # Start the mobile servers in the background
 echo "🔧 Starting mobile servers..."
-pnpm run start:mobile:concurrently & # runs in background
+pnpm install -g concurrently
+ZC="$ZC" ZE_SECRET_TOKEN="$ZE_SECRET_TOKEN" pnpm run start:mobile:concurrently & # runs in background
 echo "✅ Mobile servers started successfully."
 
 # Run adb reverse scripts to set up port forwarding
@@ -29,7 +30,7 @@ echo "✅ adbreverse executed successfully."
 
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
-pnpm run:mobile-host:android
+pnpm run:mobile-host:android --mode="$MODE"
 echo "✅ App built and installed successfully."
 
 # Run the end-to-end test scripts
