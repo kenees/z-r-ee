@@ -28,7 +28,7 @@ const USE_ZEPHYR = Boolean(process.env.ZC);
  *            when running with `react-native start/bundle`.
  */
 export default env => {
-  const {mode, platform = process.env.PLATFORM} = env;
+  const {mode, platform} = env;
 
   const config = {
     mode,
