@@ -57,6 +57,14 @@ jobs:
       - name: Install Pods
         run: pnpm --filter MobileHost pods
 
+      - uses: callstackincubator/ios@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          destination: 'simulator' # or 'device'
+          scheme: 'host'
+          configuration: 'Release'
+          working-directory: './apps/mobile-host'
+
       - name: Run iOS E2E Tests on Release Mode
         env:
           ZC: 1

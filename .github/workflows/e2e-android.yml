@@ -71,6 +71,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: callstackincubator/android@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          variant: 'Release'
+          working-directory: './apps/mobile-host'
+
       - name: Run Android E2E Tests on Release Mode
         uses: reactivecircus/android-emulator-runner@v2
         env:
