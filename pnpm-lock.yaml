@@ -415,9 +415,6 @@ importers:
       '@callstack/repack':
         specifier: 5.0.3
         version: 5.0.3(@babel/core@7.26.0)(@module-federation/enhanced@0.10.0(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react-native@0.76.6(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(react@18.3.1))(webpack@5.97.1)
-      '@react-native-community/cli':
-        specifier: ^15.1.2
-        version: 15.1.3(typescript@5.7.3)
       '@react-native/babel-plugin-codegen':
         specifier: 0.76.5
         version: 0.76.5(@babel/preset-env@7.26.0(@babel/core@7.26.0))
@@ -430,6 +427,18 @@ importers:
       '@react-native/typescript-config':
         specifier: 0.76.6
         version: 0.76.6
+      '@rnef/cli':
+        specifier: ^0.5.0
+        version: 0.5.3(typescript@5.7.3)
+      '@rnef/platform-android':
+        specifier: ^0.5.0
+        version: 0.5.3
+      '@rnef/platform-ios':
+        specifier: ^0.5.0
+        version: 0.5.3(typescript@5.7.3)
+      '@rnef/plugin-repack':
+        specifier: ^0.5.0
+        version: 0.5.3(@callstack/repack@5.0.3(@babel/core@7.26.0)(@module-federation/enhanced@0.10.0(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react-native@0.76.6(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(react@18.3.1))(webpack@5.97.1))(@rspack/core@1.2.2(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
       '@rnx-kit/align-deps':
         specifier: ^2.5.5
         version: 2.5.5
@@ -1633,6 +1642,12 @@ packages:
       webpack:
         optional: true
 
+  '@clack/core@0.4.2':
+    resolution: {integrity: sha512-NYQfcEy8MWIxrT5Fj8nIVchfRFA26yYKJcvBS7WlUIlw2OmQOY9DhGGXMovyI5J5PpxrCPGkgUi207EBrjpBvg==}
+
+  '@clack/prompts@0.10.1':
+    resolution: {integrity: sha512-Q0T02vx8ZM9XSv9/Yde0jTmmBQufZhPJfYAg2XrrrxWWaZgq1rr8nU8Hv710BQ1dhoP8rtY7YUdpGej2Qza/cw==}
+
   '@cloudflare/kv-asset-handler@0.3.4':
     resolution: {integrity: sha512-YLPHc8yASwjNkmcDMQMY35yiWjoKAKnhUbPRszBRS0YgH+IXtsMp61j+yTcnCE3oO2DgP0U3iejLC8FTtKDC8Q==}
     engines: {node: '>=16.13'}
@@ -1946,6 +1961,10 @@ packages:
   '@expo/config-types@52.0.3':
     resolution: {integrity: sha512-muxvuARmbysH5OGaiBRlh1Y6vfdmL56JtpXxB+y2Hfhu0ezG1U4FjZYBIacthckZPvnDCcP3xIu1R+eTo7/QFA==}
 
+  '@expo/fingerprint@0.11.11':
+    resolution: {integrity: sha512-gNyn1KnAOpEa8gSNsYqXMTcq0fSwqU/vit6fP5863vLSKxHm/dNt/gm/uZJxrRZxKq71KUJWF6I7d3z8qIfq5g==}
+    hasBin: true
+
   '@expo/json-file@9.0.1':
     resolution: {integrity: sha512-ZVPhbbEBEwafPCJ0+kI25O2Iivt3XKHEKAADCml1q2cmOIbQnKgLyn8DpOJXqWEyRQr/VWS+hflBh8DU2YFSqg==}
 
@@ -1954,6 +1973,10 @@ packages:
 
   '@expo/sdk-runtime-versions@1.0.0':
     resolution: {integrity: sha512-Doz2bfiPndXYFPMRwPyGa1k5QaKDVpY806UJj570epIiMzWaYyCtobasyfC++qfIXVb5Ocy7r3tP9d62hAQ7IQ==}
+
+  '@expo/spawn-async@1.7.2':
+    resolution: {integrity: sha512-QdWi16+CHB9JYP7gma19OVVg0BFkvU8zNj9GjWorYI8Iv8FUxjOCcYRuAmX4s/h91e4e7BPsskc8cSrZYho9Ew==}
+    engines: {node: '>=12'}
 
   '@fastify/ajv-compiler@3.6.0':
     resolution: {integrity: sha512-LwdXQJjmMD+GwLOkP7TVC68qa+pSSogeWWmznRJ/coyTcfe9qA05AHFSe1eZFwK6q+xVRpChnvFUkf1iYaSZsQ==}
@@ -1999,6 +2022,10 @@ packages:
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
+
+  '@isaacs/fs-minipass@4.0.1':
+    resolution: {integrity: sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==}
+    engines: {node: '>=18.0.0'}
 
   '@isaacs/ttlcache@1.4.1':
     resolution: {integrity: sha512-RQgQ4uQ+pLbqXfOmieB91ejmLwvSgv9nLx6sT6sD83s7umBypgg+OIBOBbEUiJXrfpnp9j0mRhYYdzp9uqq3lA==}
@@ -2433,11 +2460,20 @@ packages:
   '@react-native-community/cli-config-android@15.1.3':
     resolution: {integrity: sha512-v9okV/WQfMJEWRddI0S6no2v9Lvk54KgFkw1mvMYhJKVqloCNsIWzoqme0u7zIuYSzwsjXUQXVlGiDzbbwdkBw==}
 
+  '@react-native-community/cli-config-android@16.0.2':
+    resolution: {integrity: sha512-E324L3RZxVST5ijfNVYqtXj2VM3EpacF7qOxrdpW1vXiC1IUsKPaEVS4mY8oVTLsH26ZgAu2X3V9CzNk8LrNRw==}
+
   '@react-native-community/cli-config-apple@15.1.3':
     resolution: {integrity: sha512-Qv6jaEaycv+7s8wR9l9bdpIeSNFCeVANfGCX1x76SgOmGfZNIa7J3l1HaeF/5ktERMYsw/hm4u3rUn4Ks0YV1g==}
 
+  '@react-native-community/cli-config-apple@16.0.2':
+    resolution: {integrity: sha512-sWYZx/C8NVHGZtheC+FATBegTr7bg42jYP5IWz+jj+STj/XLgC46FsDc2qCj6nEOCwuuux2vTuOjYoU13gHpHg==}
+
   '@react-native-community/cli-config@15.1.3':
     resolution: {integrity: sha512-fJ9MrWp+/SszEVg5Wja8A57Whl5EfjRCHWFNkvFBtfjVUfi2hWvSTW3VBxzJuCHnPIIwpQafwjEgOrIRUI8y6w==}
+
+  '@react-native-community/cli-config@16.0.2':
+    resolution: {integrity: sha512-GVE1XR/Tge6aTvxGAUeJ4aBmvYABEfj/ewosDJzEaDsx/hdwaYAPLVu0fZLVplTbBItoilht3nkR8J7fjSwmZQ==}
 
   '@react-native-community/cli-debugger-ui@15.1.3':
     resolution: {integrity: sha512-m+fb9iAUNb9WiDdokCBLh0InJvollcgAM3gLjCT8DGTP6bH/jxtZ3DszzyIRqN9cMamItVrvDM0vkIg48xK7rQ==}
@@ -2459,6 +2495,9 @@ packages:
 
   '@react-native-community/cli-tools@15.1.3':
     resolution: {integrity: sha512-2RzoUKR+Y03ijBeeSoCSQihyN6dxy3fbHjraO4MheZZUzt/Yd1VMEDd0R5aa6rtiRDoknbHt45RL2GMa8MSaEA==}
+
+  '@react-native-community/cli-tools@16.0.2':
+    resolution: {integrity: sha512-+S0XSIE01xap9cc9UFXQJEuh7qGWDyayFX1T5uRnxo8192lTz5q3dWGBh1RYWI1JcqhlHbx9GowUxH12cIJVWQ==}
 
   '@react-native-community/cli-types@15.1.3':
     resolution: {integrity: sha512-0ZaM8LMsa7z7swBN+ObL2ysc6aA3AdS698Q6uEukym6RyX1uLbiofUdlvFSMpWSEL3D8f9OTymmL4RkCH8k6dw==}
@@ -2604,6 +2643,32 @@ packages:
 
   '@react-navigation/routers@6.1.9':
     resolution: {integrity: sha512-lTM8gSFHSfkJvQkxacGM6VJtBt61ip2XO54aNfswD+KMw6eeZ4oehl7m0me3CR9hnDE4+60iAZR8sAhvCiI3NA==}
+
+  '@rnef/cli@0.5.3':
+    resolution: {integrity: sha512-QIRQrh84m7NSN0arBDN6KX2A+cj4DjCBGDOnWR7RJvCTq+F4x1HO8Ua32DgnWQn4xXdb6/ZWXlyPyG2InwvefA==}
+    hasBin: true
+
+  '@rnef/config@0.5.3':
+    resolution: {integrity: sha512-ia/iPHq9Gzqa5ZyrwtWKNer/pk0/hJfWEbrA0zPzN1FlzRCz/CYRneKl8gX8jmNzyxMG4PUv6pbRCNLTZpJ9pQ==}
+
+  '@rnef/platform-android@0.5.3':
+    resolution: {integrity: sha512-j7bDuR1+cSQUF+NqHRX+g1dhBE+JeOENMf9eoonetAHNN7q+JoiWdnAWFqyExbtWPZpOfg0pG4Q+hwPMBTex2g==}
+
+  '@rnef/platform-apple-helpers@0.5.3':
+    resolution: {integrity: sha512-HTgZa4dIkTOZQY8J0/q4qKIily7dA8UDfV/k9gtxg9L57wvhue32R9BQC+ymOA4uOL/x1P0CDVXGYIf/VO+Baw==}
+
+  '@rnef/platform-ios@0.5.3':
+    resolution: {integrity: sha512-orpCccsk5OryqnO/LvMTLG0if6TXO+TiREsjeKH5ZgQHss8khK08UROocoYzX/r3oRo6wO6tW1V1jEA4u+0aeg==}
+
+  '@rnef/plugin-repack@0.5.3':
+    resolution: {integrity: sha512-28OetOeWQEe38FMvk3mGwq9X52IPCicA84ga33AoYI9LeLAk/E3bVMAQGh3yOzSOG01zqCCQw0A+TWoH/KQSPw==}
+    peerDependencies:
+      '@callstack/repack': ^5.0.3
+      '@rspack/core': ^1.2.8
+      '@swc/helpers': ^0.5.15
+
+  '@rnef/tools@0.5.3':
+    resolution: {integrity: sha512-rk83wbAUu8Kqu0Vsl+PFXMZ1FTb/PM/SAT5kOvmcMk2G8N2++ebKxG51NpxGI/FoWHoE7l8NfeLYe9LKsmbGOA==}
 
   '@rnx-kit/align-deps@2.5.5':
     resolution: {integrity: sha512-7OXzLZ/4bR7/2gaAVr8u4dSsjKdMbL9E0WBxAoao6JBxkIwHuHGflxwAHVL2+eoYhZd9bdnvBLDTjsBe77xfNg==}
@@ -2754,6 +2819,9 @@ packages:
 
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
+
+  '@types/adm-zip@0.5.7':
+    resolution: {integrity: sha512-DNEs/QvmyRLurdQPChqq0Md4zGvPwHerAJYWk9l2jCbD1VPpnzRJorOdiq4zsw09NFbYnhfsoEhWtxIzXpn2yw==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -3193,6 +3261,9 @@ packages:
   appdirsjs@1.2.7:
     resolution: {integrity: sha512-Quji6+8kLBC3NnBeo14nPDq0+2jUs5s3/xEye+udFHumHhRk4M7aAMXp/PBJqkKYGuuyR9M/6Dq7d2AViiGmhw==}
 
+  arg@5.0.2:
+    resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
+
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
 
@@ -3534,6 +3605,10 @@ packages:
 
   chownr@1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
+
+  chownr@3.0.0:
+    resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==}
+    engines: {node: '>=18'}
 
   chrome-launcher@0.15.2:
     resolution: {integrity: sha512-zdLEwNo3aUVzIhKhTtXfxhdvZhUghrnmkvcAq2NoDd+LeOHKf03H5jwZ8T/STsAlzyALkBVK552iaG1fGf1xVQ==}
@@ -5162,6 +5237,10 @@ packages:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
 
+  is-unicode-supported@2.1.0:
+    resolution: {integrity: sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==}
+    engines: {node: '>=18'}
+
   is-weakmap@2.0.2:
     resolution: {integrity: sha512-K5pXYOm9wqY1RgjpL3YTkF39tni1XajUIkawTLUo9EZEVUFga5gSQJF8nNS7ZwJQ02y+1YCNYcMh+HIf1ZqE+w==}
     engines: {node: '>= 0.4'}
@@ -5835,6 +5914,10 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
+  minizlib@3.0.2:
+    resolution: {integrity: sha512-oG62iEk+CYt5Xj2YqI5Xi9xWUeZhDI8jjQmC5oThVH5JGCTgIjr7ciJDzC7MBzYd//WvR1OTmP5Q38Q8ShQtVA==}
+    engines: {node: '>= 18'}
+
   mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
 
@@ -5847,6 +5930,11 @@ packages:
 
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  mkdirp@3.0.1:
+    resolution: {integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -5880,6 +5968,10 @@ packages:
   mustache@4.2.0:
     resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
     hasBin: true
+
+  nano-spawn@0.2.0:
+    resolution: {integrity: sha512-IjZBIOLxSlxu+m/kacg9JuP93oUpRemeV0mEuCy64nzBKKIL9m0aLJHtVPcVuzJDHFhElzjpwbW4a3tMzgKoZQ==}
+    engines: {node: '>=18.19'}
 
   nanoid@3.3.8:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
@@ -6949,6 +7041,10 @@ packages:
     resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
     engines: {node: '>=4'}
 
+  string-argv@0.3.2:
+    resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
+    engines: {node: '>=0.6.19'}
+
   string-length@4.0.2:
     resolution: {integrity: sha512-+l6rNN5fYHNhZZy41RXsYptCjA2Igmq4EG7kZAYFQI1E1VTXarr6ZPXBg6eq7Y6eK4FEhY6AJlyuFIb/v/S0VQ==}
     engines: {node: '>=10'}
@@ -7064,6 +7160,10 @@ packages:
 
   tar-stream@3.1.7:
     resolution: {integrity: sha512-qJj60CXt7IU1Ffyc3NJMjh6EkuCFej46zUqJ4J7pqYlThyd9bO0XBTmcOIhSzZJVWfsLks0+nle/j538YAW9RQ==}
+
+  tar@7.4.3:
+    resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==}
+    engines: {node: '>=18'}
 
   temp@0.8.4:
     resolution: {integrity: sha512-s0ZZzd0BzYv5tLSptZooSjK8oj6C+c19p7Vqta9+6NPOf7r+fxq0cJe6/oN4LTC79sy5NY8ucOJNgwsKCSbfqg==}
@@ -7186,6 +7286,10 @@ packages:
   ts-dedent@2.2.0:
     resolution: {integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==}
     engines: {node: '>=6.10'}
+
+  ts-regex-builder@1.8.2:
+    resolution: {integrity: sha512-Y8HovHFheDKm/jgLIWSO8o81xA/I9O5AGc3/vNG1sVSskatOifr3SQzAsatBXGLjL3nYhQif1MpwQRS5GF8ADg==}
+    engines: {node: '>= 18.0.0'}
 
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
@@ -7599,6 +7703,10 @@ packages:
 
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
+
+  yallist@5.0.0:
+    resolution: {integrity: sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==}
+    engines: {node: '>=18'}
 
   yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
@@ -8681,6 +8789,17 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@clack/core@0.4.2':
+    dependencies:
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
+  '@clack/prompts@0.10.1':
+    dependencies:
+      '@clack/core': 0.4.2
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
   '@cloudflare/kv-asset-handler@0.3.4':
     dependencies:
       mime: 3.0.0
@@ -8966,6 +9085,21 @@ snapshots:
 
   '@expo/config-types@52.0.3': {}
 
+  '@expo/fingerprint@0.11.11':
+    dependencies:
+      '@expo/spawn-async': 1.7.2
+      arg: 5.0.2
+      chalk: 4.1.2
+      debug: 4.4.0
+      find-up: 5.0.0
+      getenv: 1.0.0
+      minimatch: 3.1.2
+      p-limit: 3.1.0
+      resolve-from: 5.0.0
+      semver: 7.6.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@expo/json-file@9.0.1':
     dependencies:
       '@babel/code-frame': 7.10.4
@@ -8979,6 +9113,10 @@ snapshots:
       xmlbuilder: 14.0.0
 
   '@expo/sdk-runtime-versions@1.0.0': {}
+
+  '@expo/spawn-async@1.7.2':
+    dependencies:
+      cross-spawn: 7.0.6
 
   '@fastify/ajv-compiler@3.6.0':
     dependencies:
@@ -9042,6 +9180,10 @@ snapshots:
       strip-ansi-cjs: strip-ansi@6.0.1
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
+
+  '@isaacs/fs-minipass@4.0.1':
+    dependencies:
+      minipass: 7.1.2
 
   '@isaacs/ttlcache@1.4.1': {}
 
@@ -9726,6 +9868,13 @@ snapshots:
       fast-glob: 3.3.3
       fast-xml-parser: 4.5.1
 
+  '@react-native-community/cli-config-android@16.0.2':
+    dependencies:
+      '@react-native-community/cli-tools': 16.0.2
+      chalk: 4.1.2
+      fast-glob: 3.3.3
+      fast-xml-parser: 4.5.1
+
   '@react-native-community/cli-config-apple@15.1.3':
     dependencies:
       '@react-native-community/cli-tools': 15.1.3
@@ -9733,9 +9882,27 @@ snapshots:
       execa: 5.1.1
       fast-glob: 3.3.3
 
+  '@react-native-community/cli-config-apple@16.0.2':
+    dependencies:
+      '@react-native-community/cli-tools': 16.0.2
+      chalk: 4.1.2
+      execa: 5.1.1
+      fast-glob: 3.3.3
+
   '@react-native-community/cli-config@15.1.3(typescript@5.7.3)':
     dependencies:
       '@react-native-community/cli-tools': 15.1.3
+      chalk: 4.1.2
+      cosmiconfig: 9.0.0(typescript@5.7.3)
+      deepmerge: 4.3.1
+      fast-glob: 3.3.3
+      joi: 17.13.3
+    transitivePeerDependencies:
+      - typescript
+
+  '@react-native-community/cli-config@16.0.2(typescript@5.7.3)':
+    dependencies:
+      '@react-native-community/cli-tools': 16.0.2
       chalk: 4.1.2
       cosmiconfig: 9.0.0(typescript@5.7.3)
       deepmerge: 4.3.1
@@ -9808,6 +9975,20 @@ snapshots:
       - utf-8-validate
 
   '@react-native-community/cli-tools@15.1.3':
+    dependencies:
+      appdirsjs: 1.2.7
+      chalk: 4.1.2
+      execa: 5.1.1
+      find-up: 5.0.0
+      mime: 2.6.0
+      open: 6.4.0
+      ora: 5.4.1
+      prompts: 2.4.2
+      semver: 7.6.3
+      shell-quote: 1.8.2
+      sudo-prompt: 9.2.1
+
+  '@react-native-community/cli-tools@16.0.2':
     dependencies:
       appdirsjs: 1.2.7
       chalk: 4.1.2
@@ -10104,6 +10285,87 @@ snapshots:
     dependencies:
       nanoid: 3.3.8
 
+  '@rnef/cli@0.5.3(typescript@5.7.3)':
+    dependencies:
+      '@react-native-community/cli-config': 16.0.2(typescript@5.7.3)
+      '@rnef/config': 0.5.3
+      '@rnef/tools': 0.5.3
+      commander: 12.1.0
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@rnef/config@0.5.3':
+    dependencies:
+      '@babel/code-frame': 7.26.2
+      '@rnef/tools': 0.5.3
+      joi: 17.13.3
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@rnef/platform-android@0.5.3':
+    dependencies:
+      '@react-native-community/cli-config-android': 16.0.2
+      '@rnef/tools': 0.5.3
+      adm-zip: 0.5.16
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@rnef/platform-apple-helpers@0.5.3(typescript@5.7.3)':
+    dependencies:
+      '@react-native-community/cli-config': 16.0.2(typescript@5.7.3)
+      '@react-native-community/cli-config-apple': 16.0.2
+      '@rnef/tools': 0.5.3
+      '@types/adm-zip': 0.5.7
+      adm-zip: 0.5.16
+      fast-glob: 3.3.3
+      fast-xml-parser: 4.5.1
+      tar: 7.4.3
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@rnef/platform-ios@0.5.3(typescript@5.7.3)':
+    dependencies:
+      '@react-native-community/cli-config-apple': 16.0.2
+      '@rnef/platform-apple-helpers': 0.5.3(typescript@5.7.3)
+      '@rnef/tools': 0.5.3
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@rnef/plugin-repack@0.5.3(@callstack/repack@5.0.3(@babel/core@7.26.0)(@module-federation/enhanced@0.10.0(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react-native@0.76.6(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(react@18.3.1))(webpack@5.97.1))(@rspack/core@1.2.2(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)':
+    dependencies:
+      '@callstack/repack': 5.0.3(@babel/core@7.26.0)(@module-federation/enhanced@0.10.0(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react@18.3.1)(typescript@5.7.3)(webpack@5.97.1))(@rspack/core@1.2.2(@swc/helpers@0.5.15))(react-native@0.76.6(patch_hash=r7erh76accgrd473k2mif64jkq)(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@react-native-community/cli-server-api@15.1.3)(@types/react@18.3.18)(react@18.3.1))(webpack@5.97.1)
+      '@rnef/tools': 0.5.3
+      '@rspack/core': 1.2.2(@swc/helpers@0.5.15)
+      '@swc/helpers': 0.5.15
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@rnef/tools@0.5.3':
+    dependencies:
+      '@clack/prompts': 0.10.1
+      '@expo/fingerprint': 0.11.11
+      '@types/adm-zip': 0.5.7
+      adm-zip: 0.5.16
+      appdirsjs: 1.2.7
+      fast-glob: 3.3.3
+      is-unicode-supported: 2.1.0
+      nano-spawn: 0.2.0
+      picocolors: 1.1.1
+      string-argv: 0.3.2
+      ts-regex-builder: 1.8.2
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+
   '@rnx-kit/align-deps@2.5.5': {}
 
   '@rsdoctor/client@0.4.13': {}
@@ -10319,6 +10581,10 @@ snapshots:
   '@tybys/wasm-util@0.9.0':
     dependencies:
       tslib: 2.8.1
+
+  '@types/adm-zip@0.5.7':
+    dependencies:
+      '@types/node': 22.10.7
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -10864,6 +11130,8 @@ snapshots:
 
   appdirsjs@1.2.7: {}
 
+  arg@5.0.2: {}
+
   argparse@1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -11297,6 +11565,8 @@ snapshots:
   char-regex@1.0.2: {}
 
   chownr@1.1.4: {}
+
+  chownr@3.0.0: {}
 
   chrome-launcher@0.15.2:
     dependencies:
@@ -13033,6 +13303,8 @@ snapshots:
 
   is-unicode-supported@0.1.0: {}
 
+  is-unicode-supported@2.1.0: {}
+
   is-weakmap@2.0.2: {}
 
   is-weakref@1.1.0:
@@ -14040,6 +14312,10 @@ snapshots:
 
   minipass@7.1.2: {}
 
+  minizlib@3.0.2:
+    dependencies:
+      minipass: 7.1.2
+
   mitt@3.0.1: {}
 
   mkdirp-classic@0.5.3: {}
@@ -14049,6 +14325,8 @@ snapshots:
       minimist: 1.2.8
 
   mkdirp@1.0.4: {}
+
+  mkdirp@3.0.1: {}
 
   mlly@1.7.4:
     dependencies:
@@ -14094,6 +14372,8 @@ snapshots:
 
   mustache@4.2.0:
     optional: true
+
+  nano-spawn@0.2.0: {}
 
   nanoid@3.3.8: {}
 
@@ -15344,6 +15624,8 @@ snapshots:
 
   strict-uri-encode@2.0.0: {}
 
+  string-argv@0.3.2: {}
+
   string-length@4.0.2:
     dependencies:
       char-regex: 1.0.2
@@ -15493,6 +15775,15 @@ snapshots:
       fast-fifo: 1.3.2
       streamx: 2.21.1
 
+  tar@7.4.3:
+    dependencies:
+      '@isaacs/fs-minipass': 4.0.1
+      chownr: 3.0.0
+      minipass: 7.1.2
+      minizlib: 3.0.2
+      mkdirp: 3.0.1
+      yallist: 5.0.0
+
   temp@0.8.4:
     dependencies:
       rimraf: 2.6.3
@@ -15589,6 +15880,8 @@ snapshots:
       typescript: 5.7.3
 
   ts-dedent@2.2.0: {}
+
+  ts-regex-builder@1.8.2: {}
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -16001,6 +16294,8 @@ snapshots:
   y18n@5.0.8: {}
 
   yallist@3.1.1: {}
+
+  yallist@5.0.0: {}
 
   yaml@1.10.2: {}
 
