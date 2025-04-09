@@ -30,7 +30,7 @@ echo "✅ adbreverse executed successfully."
 
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
-pnpm run:mobile-host:android --mode="$MODE"
+pnpm run:mobile-host:android --variant="$MODE"
 echo "✅ App built and installed successfully."
 
 # Run the end-to-end test scripts

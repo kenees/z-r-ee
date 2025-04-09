@@ -25,7 +25,7 @@ echo "✅ Mobile servers started successfully."
 
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
-pnpm run:mobile-host:ios --simulator="$SIMULATOR_NAME" --mode="$MODE"
+pnpm run:mobile-host:ios --simulator="$SIMULATOR_NAME" --configuration="$MODE"
 echo "✅ App built and installed successfully."
 
 # Run the end-to-end test scripts
