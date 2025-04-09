@@ -23,7 +23,7 @@ jobs:
       - uses: callstackincubator/android@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          variant: 'devDebug'
+          variant: 'Debug'
           rnef-build-extra-params: '--active-arch-only'
           working-directory: './apps/mobile-host'
 
