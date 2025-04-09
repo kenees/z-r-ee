@@ -23,6 +23,12 @@ pnpm install -g concurrently
 ZC="$ZC" ZE_SECRET_TOKEN="$ZE_SECRET_TOKEN" pnpm run start:mobile:concurrently & # runs in background
 echo "✅ Mobile servers started successfully."
 
+echo "Setup local rnef config"
+RNEF_PATH="apps/mobile-host/.rnef/cache"
+mkdir -p "$RNEF_PATH"
+echo "Write github token into project.json"
+echo "{\"githubToken\": \"$GITHUB_TOKEN\"}" > "$RNEF_PATH/project.json"
+
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
 pnpm run:mobile-host:ios --simulator="$SIMULATOR_NAME" --configuration="$MODE"
