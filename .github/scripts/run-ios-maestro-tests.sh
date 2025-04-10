@@ -31,7 +31,7 @@ echo "{\"githubToken\": \"$GITHUB_TOKEN\"}" > "$RNEF_PATH/project.json"
 
 # Build and install the mobile app on the device
 echo "📱 Building and installing the app on the device..."
-pnpm run:mobile-host:ios --simulator="$SIMULATOR_NAME" --configuration="$MODE"
+pnpm run:mobile-host:ios --destination="simulator" --configuration="$MODE"
 echo "✅ App built and installed successfully."
 
 # Run the end-to-end test scripts
