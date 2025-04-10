@@ -83,7 +83,7 @@ jobs:
         env:
           ZC: 1
           ZE_SECRET_TOKEN: ${{ secrets.ZE_SECRET_TOKEN }}
-          MODE: 'release'
+          MODE: 'Release'
         with:
           api-level: ${{ env.ANDROID_EMULATOR_API_LEVEL }}
           target: ${{ env.ANDROID_EMULATOR_TARGET }}
