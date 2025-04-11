@@ -19,7 +19,6 @@ jobs:
     env:
       RUBY_VERSION: 2.7.6
       MAESTRO_VERSION: 1.39.4
-      SIMULATOR_NAME: "iPhone 15 Pro Max"
       MAESTRO_DRIVER_STARTUP_TIMEOUT: 240000
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
