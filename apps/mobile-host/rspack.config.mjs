@@ -28,9 +28,9 @@ const USE_ZEPHYR = Boolean(process.env.ZC);
 const config = env => {
   const {mode, platform} = env;
   return {
+    mode,
     context: __dirname,
     entry: './index.js',
-
     resolve: {
       ...Repack.getResolveOptions(),
     },
