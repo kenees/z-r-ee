@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {LogBox} from 'react-native';
+import React, { useState } from 'react';
+import { LogBox } from 'react-native';
 
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   LocalizationContextProvider,
   QueryClient,
@@ -15,10 +15,14 @@ import MainNavigator from './navigation/MainNavigator';
 
 LogBox.ignoreAllLogs();
 
+const BUILD_ID = ZE_BUILD_ID;
+
+
+
 const App = () => {
   const [isSplashVisible, setSplashVisible] = useState(true);
   const queryClient = new QueryClient();
-
+  console.log('BUILD_ID', BUILD_ID);
   const hideSplashScreen = () => {
     setSplashVisible(false);
   };

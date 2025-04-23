@@ -1,5 +1,4 @@
 import * as Repack from '@callstack/repack';
-import {RsdoctorRspackPlugin} from '@rsdoctor/rspack-plugin';
 import rspack from '@rspack/core';
 import {getSharedDependencies} from 'mobile-sdk';
 import path from 'node:path';
@@ -26,16 +25,12 @@ const USE_ZEPHYR = Boolean(process.env.ZC);
  * @param env Environment options passed from either Webpack CLI or React Native Community CLI
  *            when running with `rnef start/bundle`.
  */
-export default env => {
+const config = env => {
   const {mode, platform} = env;
-
-  const config = {
+  return {
     mode,
     context: __dirname,
     entry: './index.js',
-    experiments: {
-      incremental: mode === 'development',
-    },
     resolve: {
       ...Repack.getResolveOptions(),
     },
@@ -64,22 +59,13 @@ export default env => {
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,
       }),
+      new Repack.plugins.HermesBytecodePlugin({
+        enabled: mode === 'production',
+        test: /\.(js)?bundle$/,
+        exclude: /index.bundle$/,
+      }),
     ],
   };
-
-  if (process.env.RSDOCTOR) {
-    config.plugins.push(
-      new RsdoctorRspackPlugin({
-        supports: {
-          generateTileGraph: true,
-        },
-      }),
-    );
-  }
-
-  if (USE_ZEPHYR) {
-    return withZephyr()(config);
-  }
-
-  return config;
 };
+
+export default USE_ZEPHYR ? withZephyr()(config) : config;

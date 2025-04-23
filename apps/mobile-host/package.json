@@ -49,6 +49,7 @@
     "@babel/runtime": "^7.25.0",
     "@callstack/eslint-config": "^15.0.0",
     "@callstack/repack": "5.0.6",
+    "@react-native-community/cli": "^15.1.2",
     "@react-native/babel-plugin-codegen": "0.76.5",
     "@react-native/babel-preset": "0.76.6",
     "@react-native/eslint-config": "0.76.6",
@@ -78,8 +79,7 @@
     "reactotron-react-native": "^5.1.12",
     "typescript": "^5.6.3",
     "webpack": "^5.95.0",
-    "zephyr-repack-plugin": "0.0.36",
-    "zephyr-rspack-plugin": "0.0.36"
+    "zephyr-repack-plugin": "0.0.38"
   },
   "rnx-kit": {
     "kitType": "app",
