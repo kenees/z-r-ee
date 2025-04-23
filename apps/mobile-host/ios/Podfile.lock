@@ -1,6 +1,6 @@
 PODS:
   - boost (1.84.0)
-  - callstack-repack (5.0.3):
+  - callstack-repack (5.0.6):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2081,6 +2081,6 @@ SPEC CHECKSUMS:
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
   Yoga: be6f55a028e86c83ae066f018e9b5d24ffc45436
 
-PODFILE CHECKSUM: 253eaa51fb55da41e58c70524c458232b97d73ad
+PODFILE CHECKSUM: acbb84c97dea42fa686dc147424499b5098007c4
 
 COCOAPODS: 1.16.2
