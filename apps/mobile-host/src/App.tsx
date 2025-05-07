@@ -18,7 +18,6 @@ LogBox.ignoreAllLogs();
 const App = () => {
   const [isSplashVisible, setSplashVisible] = useState(true);
   const queryClient = new QueryClient();
-
   const hideSplashScreen = () => {
     setSplashVisible(false);
   };
