@@ -8,6 +8,7 @@ export default {
     ios: platformIOS(),
     android: platformAndroid(),
   },
-  remoteCacheProvider: 'github-actions',
+  // remoteCacheProvider: 'github-actions',
+  remoteCacheProvider: null,
   root: process.env.PROJECT_ROOT_PATH ?? './',
 };
