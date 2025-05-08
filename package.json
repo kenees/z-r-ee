@@ -69,12 +69,15 @@
         }
       }
     },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "webpack"
+      ]
+    },
     "allowedDeprecatedVersions": {
       "eslint": "8"
     },
     "overrides": {
-      "@babel/runtime": "^7.26.10",
-      "@babel/helpers": "^7.26.10",
       "image-size": ">=1.2.1"
     }
   }

@@ -1,17 +1,17 @@
 {
   "@babel/core": {
     "name": "@babel/core",
-    "version": "^7.25.2",
+    "version": "^7.26.10",
     "devOnly": true
   },
   "@babel/preset-env": {
     "name": "@babel/preset-env",
-    "version": "^7.25.3",
+    "version": "^7.26.10",
     "devOnly": true
   },
   "@babel/runtime": {
     "name": "@babel/runtime",
-    "version": "^7.25.0",
+    "version": "^7.26.10",
     "devOnly": true
   },
   "@callstack/repack": {
