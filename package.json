@@ -80,5 +80,10 @@
     "overrides": {
       "image-size": ">=1.2.1"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
