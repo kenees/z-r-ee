@@ -1,17 +1,17 @@
 {
   "@babel/core": {
     "name": "@babel/core",
-    "version": "^7.25.2",
+    "version": "^7.26.10",
     "devOnly": true
   },
   "@babel/preset-env": {
     "name": "@babel/preset-env",
-    "version": "^7.25.3",
+    "version": "^7.26.10",
     "devOnly": true
   },
   "@babel/runtime": {
     "name": "@babel/runtime",
-    "version": "^7.25.0",
+    "version": "^7.26.10",
     "devOnly": true
   },
   "@callstack/repack": {
@@ -79,21 +79,6 @@
     "version": "^6.4.12",
     "devOnly": true
   },
-  "@types/react-test-renderer": {
-    "name": "@types/react-test-renderer",
-    "version": "^18.3.0",
-    "devOnly": true
-  },
-  "babel-jest": {
-    "name": "babel-jest",
-    "version": "^29.6.3",
-    "devOnly": true
-  },
-  "babel-loader": {
-    "name": "babel-loader",
-    "version": "^9.2.1",
-    "devOnly": true
-  },
   "eslint": {
     "name": "eslint",
     "version": "^8.57.0",
@@ -104,19 +89,9 @@
     "version": "^29.6.3",
     "devOnly": true
   },
-  "react-test-renderer": {
-    "name": "react-test-renderer",
-    "version": "^18.3.1",
-    "devOnly": true
-  },
   "typescript": {
     "name": "typescript",
     "version": "^5.6.3",
-    "devOnly": true
-  },
-  "webpack": {
-    "name": "webpack",
-    "version": "^5.95.0",
     "devOnly": true
   },
   "zephyr-repack-plugin": {
