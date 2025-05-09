@@ -28,14 +28,7 @@ mprocs.log
 .xcode.env.local
 vite.config.*.timestamp*
 
-# aws sam
 .aws-sam/*
-
-
-# logs
-*.log
-*.txt
-*.json
 
 .rnef
 
