@@ -52,7 +52,7 @@ const config = env => {
         filename: 'MobileCart.container.js.bundle',
         dts: false,
         remotes: {
-          MobileCheckout: `MobileCheckout@http://192.168.31.34:9002/${platform}/MobileCheckout.container.js.bundle`,
+          // MobileCheckout: `MobileCheckout@http://192.168.31.34:9002/${platform}/MobileCheckout.container.js.bundle`,
         },
         exposes: STANDALONE
           ? undefined
