@@ -5,7 +5,7 @@
   "scripts": {
     "android": "rnef run:android",
     "ios": "rnef run:ios",
-    "start": "rnef start --port 9002",
+    "start": "rnef start --port 9002 --host 0.0.0.0",
     "start:standalone": "STANDALONE=1 rnef start --port 8081",
     "test": "nx jest:test --passWithNoTests",
     "lint": "nx eslint:lint --ext .js,.jsx,.ts,.tsx",

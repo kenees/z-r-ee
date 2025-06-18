@@ -8,7 +8,7 @@ import {withZephyr} from 'zephyr-repack-plugin';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const STANDALONE = true; // Boolean(process.env.STANDALONE); // wangcheng
+const STANDALONE = Boolean(process.env.STANDALONE); // wangcheng
 const USE_ZEPHYR = Boolean(process.env.ZC);
 
 /**
@@ -53,7 +53,7 @@ const config = env => {
         filename: 'MobileInventory.container.js.bundle',
         dts: false,
         remotes: {
-          MobileCart: `MobileCart@http://localhost:9000/${platform}/MobileCart.container.js.bundle`,
+          MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`,
         },
         exposes: STANDALONE
           ? undefined
