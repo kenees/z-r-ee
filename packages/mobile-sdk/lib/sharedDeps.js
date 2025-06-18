@@ -12,6 +12,11 @@ const getSharedDependencies = ({eager = true}) => {
     return [dep, {singleton: true, eager, requiredVersion: version}];
   });
 
+  shared.push({
+    'react-native/Libraries/Utilities/DevLoadingView': { singleton: true }
+  })
+
+
   return Object.fromEntries(shared);
 };
 
