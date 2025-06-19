@@ -6,11 +6,11 @@ import {LoadingScreen} from 'mobile-core';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { Text, View } from 'react-native';
 
-// const HomeScreen = React.lazy(() => {
+const HomeScreen = React.lazy(() => {
   // @ts-ignore federated dts not enabled yet
   // eslint-disable-next-line import/no-unresolved
-  // return import('MobileInventory/HomeScreen');
-// });
+  return import('MobileInventory/HomeScreen');
+});
 
 const LazyLoadedHomeScreen = () => {
   const navigation = useNavigation();
@@ -22,10 +22,7 @@ const LazyLoadedHomeScreen = () => {
   return (
     <ErrorBoundary name="InventoryScreen">
       <React.Suspense fallback={<LoadingScreen />}>
-        {/* <HomeScreen onProductPress={handleProductPress} /> */}
-        <View>
-          <Text>jjjj</Text>
-        </View>
+        <HomeScreen onProductPress={handleProductPress} />
       </React.Suspense>
     </ErrorBoundary>
   );

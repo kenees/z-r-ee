@@ -22,29 +22,12 @@ const App = () => {
     setSplashVisible(false);
   };
 
-  // return (
-  //   <>
-  //     {isSplashVisible ? (
-  //       <AnimatedBootSplash onAnimationEnd={hideSplashScreen} />
-  //     ) : null}
-  //      <ThemeProvider>
-  //       <LocalizationContextProvider>
-  //         <QueryClientProvider client={queryClient}>
-  //           <SnackbarContextProvider>
-  //             <NavigationContainer>
-  //               <MainNavigator />
-  //             </NavigationContainer>
-  //           </SnackbarContextProvider>
-  //         </QueryClientProvider>
-  //       </LocalizationContextProvider>
-  //     </ThemeProvider>
-
-  //   </>
-  // );
-
   return (
     <>
-      <ThemeProvider>
+      {isSplashVisible ? (
+        <AnimatedBootSplash onAnimationEnd={hideSplashScreen} />
+      ) : null}
+       <ThemeProvider>
         <LocalizationContextProvider>
           <QueryClientProvider client={queryClient}>
             <SnackbarContextProvider>
@@ -55,6 +38,7 @@ const App = () => {
           </QueryClientProvider>
         </LocalizationContextProvider>
       </ThemeProvider>
+
     </>
   );
 };

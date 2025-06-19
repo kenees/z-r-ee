@@ -53,7 +53,7 @@ const config = env => {
         filename: 'MobileInventory.container.js.bundle',
         dts: false,
         remotes: {
-          MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`,
+          // MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`,
         },
         exposes: STANDALONE
           ? undefined
@@ -61,7 +61,8 @@ const config = env => {
               './HomeScreen': './src/screens/HomeScreen',
               './ProductDetailsScreen': './src/screens/ProductDetailsScreen',
             },
-        shared: getSharedDependencies({eager: STANDALONE}),
+        // shared: getSharedDependencies({eager: STANDALONE}),
+        shared: getSharedDependencies({eager: true}),
       }),
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,

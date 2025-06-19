@@ -56,7 +56,8 @@ const config = env => {
           : {
               './OrdersScreen': './src/screens/OrdersScreen',
             },
-        shared: getSharedDependencies({eager: STANDALONE}),
+        // shared: getSharedDependencies({eager: STANDALONE}),
+        shared: getSharedDependencies({eager: true}),
       }),
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,

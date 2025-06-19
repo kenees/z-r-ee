@@ -103,3 +103,9 @@ pnpm typecheck
 
 
 ### workflows test..12345678
+
+### Local Build Release apk
+```
+    cd apps/mobile-host/
+    pnpm run build:android
+```
