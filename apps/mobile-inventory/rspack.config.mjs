@@ -53,7 +53,7 @@ const config = env => {
         filename: 'MobileInventory.container.js.bundle',
         dts: false,
         remotes: {
-          // MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`,
+          MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`,
         },
         exposes: STANDALONE
           ? undefined

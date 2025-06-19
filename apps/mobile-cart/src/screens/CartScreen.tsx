@@ -14,11 +14,11 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import CartItem from '../components/CartItem';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-// const CheckoutSection = React.lazy(
-//   // @ts-ignore federated dts not enabled yet
-//   // eslint-disable-next-line import/no-unresolved
-//   () => import('MobileCheckout/CheckoutSection'),
-// );
+const CheckoutSection = React.lazy(
+  // @ts-ignore federated dts not enabled yet
+  // eslint-disable-next-line import/no-unresolved
+  () => import('MobileCheckout/CheckoutSection'),
+);
 
 type Props = {
   onCheckoutSuccess: () => void;
@@ -59,19 +59,13 @@ export default function CartScreen({onCheckoutSuccess}: Props) {
         <View style={styles.checkoutContainer}>
           <ErrorBoundary name="CheckoutSuccessScreen">
             <React.Suspense fallback={<ActivityIndicator />}>
-              {/* <CheckoutSection onCheckoutSuccess={onCheckoutSuccess} /> */}
+              <CheckoutSection onCheckoutSuccess={onCheckoutSuccess} />
             </React.Suspense>
           </ErrorBoundary>
         </View>
       </View>
     </ModuleBoundary>
   );
-
-  return (
-    <View>
-      <Text>cart screen</Text>
-    </View>
-  )
 }
 
 const styles = StyleSheet.create({

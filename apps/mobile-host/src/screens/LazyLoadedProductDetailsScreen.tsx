@@ -5,11 +5,11 @@ import Placeholder from '../components/Placeholder';
 import {ProductDetailsNavigationProps} from '../navigation/types';
 import { View, Text } from 'react-native';
 
-// const ProductDetailsScreen = React.lazy(async () => {
+const ProductDetailsScreen = React.lazy(async () => {
   // @ts-ignore federated dts not enabled yet
   // eslint-disable-next-line import/no-unresolved
-  // return await import('MobileInventory/ProductDetailsScreen');
-// });
+  return await import('MobileInventory/ProductDetailsScreen');
+});
 
 type Props = ProductDetailsNavigationProps;
 
@@ -28,12 +28,11 @@ const LazyLoadedProductDetailsScreen = ({navigation, route}: Props) => {
   return (
     <ErrorBoundary name="ProductDetailsScreen">
       <React.Suspense fallback={<Placeholder />}>
-        {/* <ProductDetailsScreen
+        <ProductDetailsScreen
           goBack={goBack}
           goToCart={goToCart}
           productId={productId}
-        /> */}
-        <View><Text>jjj</Text></View>
+        />
       </React.Suspense>
     </ErrorBoundary>
   );
