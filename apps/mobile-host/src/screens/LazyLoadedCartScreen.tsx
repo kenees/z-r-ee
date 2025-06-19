@@ -21,7 +21,7 @@ type Props = CartNavigationProps;
 
 const LazyLoadedCartScreen = ({navigation}: Props) => {
   const handleCheckoutSuccess = () => {
-    navigation.navigate('CheckoutSuccess');
+    // navigation.navigate('CheckoutSuccess');
   };
 
   return (

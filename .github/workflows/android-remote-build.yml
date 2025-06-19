@@ -35,3 +35,4 @@ jobs:
           keystore-key-password: ${{ secrets.RNEF_UPLOAD_KEY_PASSWORD }}
           rnef-build-extra-params: '--active-arch-only'
           working-directory: './apps/mobile-host'
+          re-sign: true
