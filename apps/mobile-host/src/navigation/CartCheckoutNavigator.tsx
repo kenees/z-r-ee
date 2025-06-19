@@ -16,13 +16,13 @@ const CartCheckoutNavigator = () => {
   return (
     <CartCheckout.Navigator screenOptions={{headerShown: false}}>
       <CartCheckout.Screen name="Cart" component={LazyLoadedCartScreen} />
-      {/* <CartCheckout.Screen
+      <CartCheckout.Screen
         options={{
           presentation: 'fullScreenModal',
         }}
         name="CheckoutSuccess"
         component={LazyLoadedCheckoutSuccessScreen}
-      /> */}
+      />
     </CartCheckout.Navigator>
   );
 };

@@ -51,7 +51,7 @@ const config = env => {
         remotes: {
           MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`, // x
           MobileInventory: `MobileInventory@http://192.168.31.34:9001/${platform}/MobileInventory.container.js.bundle`,
-          // MobileCheckout: `MobileCheckout@http://192.168.31.34:9002/${platform}/MobileCheckout.container.js.bundle`,
+          MobileCheckout: `MobileCheckout@http://192.168.31.34:9002/${platform}/MobileCheckout.container.js.bundle`,
           MobileOrders: `MobileOrders@http://192.168.31.34:9003/${platform}/MobileOrders.container.js.bundle`,
         },
         shared: getSharedDependencies({eager: true}),
