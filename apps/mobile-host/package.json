@@ -5,7 +5,7 @@
   "scripts": {
     "android": "rnef run:android",
     "ios": "rnef run:ios",
-    "start": "rnef start",
+    "start": "rnef start --host 0.0.0.0",
     "test": "nx jest:test --passWithNoTests",
     "lint": "nx eslint:lint --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc",
@@ -15,7 +15,8 @@
     "pods:update": "(cd ios && bundle exec pod update)",
     "align-deps": "rnx-align-deps --write",
     "check-deps": "rnx-align-deps",
-    "adbreverse": "adb reverse tcp:8081 tcp:8081"
+    "adbreverse": "adb reverse tcp:8081 tcp:8081",
+    "build:android": "rnef build:android --variant Release --active-arch-only"
   },
   "dependencies": {
     "@module-federation/enhanced": "0.10.0",

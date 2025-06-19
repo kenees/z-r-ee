@@ -8,7 +8,7 @@ import {withZephyr} from 'zephyr-repack-plugin';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const STANDALONE = Boolean(process.env.STANDALONE);
+const STANDALONE = Boolean(process.env.STANDALONE); // wangcheng
 const USE_ZEPHYR = Boolean(process.env.ZC);
 
 /**
@@ -53,7 +53,7 @@ const config = env => {
         filename: 'MobileInventory.container.js.bundle',
         dts: false,
         remotes: {
-          MobileCart: `MobileCart@http://localhost:9000/${platform}/MobileCart.container.js.bundle`,
+          MobileCart: `MobileCart@http://192.168.31.34:9000/${platform}/MobileCart.container.js.bundle`,
         },
         exposes: STANDALONE
           ? undefined
@@ -61,7 +61,8 @@ const config = env => {
               './HomeScreen': './src/screens/HomeScreen',
               './ProductDetailsScreen': './src/screens/ProductDetailsScreen',
             },
-        shared: getSharedDependencies({eager: STANDALONE}),
+        // shared: getSharedDependencies({eager: STANDALONE}),
+        shared: getSharedDependencies({eager: true}),
       }),
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,

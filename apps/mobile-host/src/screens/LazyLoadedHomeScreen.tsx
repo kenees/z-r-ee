@@ -4,6 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import {LoadingScreen} from 'mobile-core';
 
 import ErrorBoundary from '../components/ErrorBoundary';
+import { Text, View } from 'react-native';
 
 const HomeScreen = React.lazy(() => {
   // @ts-ignore federated dts not enabled yet

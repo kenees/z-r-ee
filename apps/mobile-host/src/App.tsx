@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {LogBox} from 'react-native';
+import {LogBox, Text, View} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {
@@ -27,7 +27,7 @@ const App = () => {
       {isSplashVisible ? (
         <AnimatedBootSplash onAnimationEnd={hideSplashScreen} />
       ) : null}
-      <ThemeProvider>
+       <ThemeProvider>
         <LocalizationContextProvider>
           <QueryClientProvider client={queryClient}>
             <SnackbarContextProvider>
@@ -38,6 +38,7 @@ const App = () => {
           </QueryClientProvider>
         </LocalizationContextProvider>
       </ThemeProvider>
+
     </>
   );
 };

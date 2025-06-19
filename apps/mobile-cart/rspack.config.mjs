@@ -8,7 +8,7 @@ import {withZephyr} from 'zephyr-repack-plugin';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const STANDALONE = Boolean(process.env.STANDALONE);
+const STANDALONE = Boolean(process.env.STANDALONE); // wangcheng
 const USE_ZEPHYR = Boolean(process.env.ZC);
 
 /**
@@ -52,7 +52,7 @@ const config = env => {
         filename: 'MobileCart.container.js.bundle',
         dts: false,
         remotes: {
-          MobileCheckout: `MobileCheckout@http://localhost:9002/${platform}/MobileCheckout.container.js.bundle`,
+          MobileCheckout: `MobileCheckout@http://192.168.31.34:9002/${platform}/MobileCheckout.container.js.bundle`,
         },
         exposes: STANDALONE
           ? undefined
@@ -60,7 +60,8 @@ const config = env => {
               './CartScreen': './src/screens/CartScreen',
               './AddToCart': './src/components/AddToCart',
             },
-        shared: getSharedDependencies({eager: STANDALONE}),
+        // shared: getSharedDependencies({eager: STANDALONE}),
+        shared: getSharedDependencies({eager: true}),
       }),
       new rspack.IgnorePlugin({
         resourceRegExp: /^@react-native-masked-view/,
